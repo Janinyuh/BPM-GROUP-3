@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap');
+body{
+    height: 90%;
+}
+*{
+    
+    padding: 0;
+    font-family: alata;
+}
+#header{
+    background-position: center;
+    height:  100vh;
+    background-size: cover;
+}
+
+.container{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.logo{
+    width: 130px;
+    margin-top: 25px;
+    margin-left: -30px;
+}
+
+.container h1{
+    font-size: 58px;
+    font-style: alata;
+    
+}
+
+
+#sideNav
+{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    z-index: 2;
+    background-image:linear-gradient(-250deg, #CEA835, black);
+    transition: .5s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a{
+    top: 30px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+#menu{
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* footer */
+#footer{
+    margin-top: 100px;
+    padding:  50px 0 30px;
+}
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #f67c92;
+}
+
+.footer-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left-col{
+    flex-basis: 50%;
+}
+.footer-right-col{
+    flex-basis: 50%;
+}
+
+
+/*start*/
+#boxes{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+.boxleft{
+    padding: 10px;
+    margin-left: 100px;
+    flex-basis: 53%;
+    background: #ccc;
+    width: 700px;
+    height: 550px;
+    border: 20px solid #A2BC68;
+    border-radius: 3px;
+}
+.boxright{
+    flex-basis: 25%;
+    margin-right: 50px;
+    background: #A2BC68;
+    width: 300px;
+    height: 610px;
+    border-radius: 3px;
+
+}
+
+.boxa{
+    background: #D93B3B;
+    width: 320px;
+    height: 250px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.boxa h3{
+    color: #fff;
+    padding: 50px 0px;
+    font-style: alata;
+    font-size: 20px;
+}
+.boxa:hover{
+ opacity: 0.5; 
+}
+.boxb:hover{
+ opacity: 0.5; 
+}
+.boxc:hover{
+ opacity: 0.5; 
+}
+
+.boxb{
+    background: #CEA835;
+    width: 320px;
+    height: 250px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boxb h3{
+    color: #fff;
+    padding: 50px 0px;
+    font-style: alata;
+    font-size: 20px;
+}
+
+.boxc{
+    background: #4E96A6;
+    width: 670px;
+    height: 250px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.boxc h3{
+    color: #fff;
+    padding: 50px;
+    font-style: alata;
+    font-size: 20px;
+}
+.box1{
+    background: #D93B3B;
+    font-style: alata;
+    font-size: 24px;
+    background-size: cover;
+    width: 290px;
+    margin-left: 15px;
+}
+.box1 h3{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.announcement{
+    margin-left: 15px;
+    width: 290px;
+    background: #fff;
+    border: 1px solid black;
+}
+
+#says{
+    margin-left: 10px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    text-align:left;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+}
+#says:hover{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 770px){
+    
+
+    
+
+
+    #header{
+        background-image: none;
+    }
+
+            #menu{
+            width: 47px;
+            position: fixed;
+            right: 1000px;
+            top: 50px;
+            
+        }
+
+        #sideNav
+        {
+            width: 150px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            z-index: 2;
+            background-image:linear-gradient(-250deg, #CEA835, black);
+            transition: .5s;
+        }
+
+            #menu{
+        width: 40px;
+        position: fixed;
+        right: 80px;
+        top: 30px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+
+        .container{
+            margin_right: 70px;
+            margin-left: 70px;
+        }
+
+        .logo{
+            width: 90px;
+            margin-top: 20px;
+            margin-left: -15px;
+
+        }
+        .container h1{
+        font-size: 38px;
+        font-style: alata;
+        
+}
+        .boxleft{
+    height: 850px;
+
+}
+   
+    
+}
