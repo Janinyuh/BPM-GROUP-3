@@ -65,10 +65,44 @@ header{
 /*after the header codes in every page*/
 
 .content{
-	width: 80%;
-	height: 300px;
-	position: fixed;
+	width: 85%;
+	height: 95%px;
+	position: absolute;
 	margin-top: 5%;
 	margin-left: 15%;
-	outline: 2px solid black;
+	/*outline: 2px solid black;*/ /*<------- Delete this code to remove the black borders*/
+}
+.Cheader{
+	margin: 10px;
+	margin-bottom: 10px;
+}
+.content button{
+	margin-left: 5px;
+}
+#searchbar{
+	width: 60%;
+	height: 25px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.Add{
+	
+}
+.Add label{
+	margin-left: 10px;
+}
+/*table code*/
+.table1{
+	margin: 10px;
+	width: 98%;
+	border: 1px solid black;
+}
+
+.table1 th, td{
+	text-align: center;
+}
+.table1 th{
+	border-bottom: 2px solid black;
+	border-width: 10%;
+	padding-bottom: 8px;
 }

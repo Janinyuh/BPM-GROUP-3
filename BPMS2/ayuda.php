@@ -35,7 +35,6 @@
     <th>Amount</th>
     <th>Date Claimed</th>
     <th>Action</th>
-    
   </tr>
   <tbody>
 					<?php
