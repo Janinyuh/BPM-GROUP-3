@@ -66,7 +66,7 @@
 	 				<th>NAME</th>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT purok FROM users WHERE userID = foodpacks.userID AND purok = ('$purok2'));") or die(mysqli_error());
+						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT purok FROM users WHERE userID = foodpacks.userID AND purok = ('$purok2') AND userID != ('$userID2'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							
