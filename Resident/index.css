@@ -100,7 +100,7 @@ nav ul li a:hover{
 .about-text{
 	max-width: 500px;
 	display: inline-block;
-	padding-left: 10px;
+	padding-left: 445px;
 	padding-top: -200px;
 }
 .about-text h1{
@@ -113,13 +113,12 @@ nav ul li a:hover{
 	background: #D93B3A;
 }
 .about-text h2{
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: 200;
 }
 .about-text p{
 	padding-top: 20px;
-	font-stretch: 25px;
-	font-size: 24px;
+	font-size: 15px;
 	font-style: italic;
 	line-height: 40px;
 
@@ -220,7 +219,6 @@ nav ul li a:hover{
   margin: 0;
   z-index: -1;
   object-fit: cover;
-  filter: grayscale(1);
   transition: filter 200ms ease, transform 250ms linear;
 }
 

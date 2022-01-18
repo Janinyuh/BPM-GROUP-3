@@ -20,12 +20,9 @@
 	</header>
 	<div class="sidebar">
 		<a href="../home page/home.html"><span>Home</span></a>
-		<a href="../Add account/add account.php"><span>Add account</span></a>
 		<a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
 		<a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
-		<a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-		<a href="../Announcement/announcement.php"><span>Anouncement</span></a>
-		<a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
+		<a href="../Food pack/Food pack.php" id="main"><span>Food Packs</span></a>
 	</div>
 
 	<div class="content">
@@ -40,8 +37,6 @@
 		<div class="Add">
 			<label>User ID</label>
 			<input type="text" name="userID" id="userID" placeholder="User ID">
-			<label>Name</label>
-			<input type="text" name="name3" id="name3" placeholder="Complete Name">
 			<label>Quantity</label>
 			<input type="text" name="quantity" id="quantity" placeholder="Quantity">
 			<label>Date Claimed</label>

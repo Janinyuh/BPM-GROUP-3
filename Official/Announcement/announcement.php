@@ -20,12 +20,7 @@
 	</header>
 	<div class="sidebar">
 		<a href="../home page/home.html"><span>Home</span></a>
-		<a href="../Add account/add account.php"><span>Add account</span></a>
-		<a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
-		<a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
-		<a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-		<a href="../Announcement/announcement.php"><span>Anouncement</span></a>
-		<a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
+		<a href="../Announcement/announcement.php" id="main"><span>Anouncement</span></a>
 	</div>
 
 	<div class="content">
@@ -44,26 +39,26 @@
 				<label for="ZP">Zone/Purok</label>
 				<select name="ZP" id="ZP">
 					<option value="AllZP">All</option>
-					<option value="zone1">Zone 1</option>
-					<option value="zone2">Zone 2</option>
-					<option value="zone3">Zone 3</option>
-					<option value="zone4">Zone 4</option>
-					<option value="zone5">Zone 5</option>
-					<option value="zone6">Zone 6</option>
-					<option value="zone7">Zone 7</option>
-					<option value="zone8">Zone 8</option>
-					<option value="zone9">Zone 9</option>
-					<option value="zone10">Zone 10</option>
-					<option value="zone11">Zone 11</option>
-					<option value="zone12">Zone 12</option>
-					<option value="zone13">Zone 13</option>
-					<option value="zone14">Zone 14</option>
-					<option value="zone15">Zone 15</option>
-					<option value="zone16">Zone 16</option>
-					<option value="zone17">Zone 17</option>
-					<option value="zone18">Zone 18</option>
-					<option value="zone19">Zone 19</option>
-					<option value="zone20">Zone 20</option>
+					<option value="Purok 1">Purok 1</option>
+					<option value="Purok 2">Purok 2</option>
+					<option value="Purok 3">Purok 3</option>
+					<option value="Purok 4">Purok 4</option>
+					<option value="Purok 5">Purok 5</option>
+					<option value="Purok 6">Purok 6</option>
+					<option value="Purok 7">Purok 7</option>
+					<option value="Purok 8">Purok 8</option>
+					<option value="Purok 9">Purok 9</option>
+					<option value="Purok 10">Purok 10</option>
+					<option value="Purok 11">Purok 11</option>
+					<option value="Purok 12">Purok 12</option>
+					<option value="Purok 13">Purok 13</option>
+					<option value="Purok 14">Purok 14</option>
+					<option value="Purok 15">Purok 15</option>
+					<option value="Purok 16">Purok 16</option>
+					<option value="Purok 17">Purok 17</option>
+					<option value="Purok 18">Purok 18</option>
+					<option value="Purok 19">Purok 19</option>
+					<option value="Purok 20">Purok 20</option>
 				</select>
 			</div>
 			<div>
@@ -84,27 +79,26 @@
 			<div>
 				<label for="MZP">Zone/Purok</label>
 				<select name="MZP" id="MZP" multiple>
-					<option value="AllZP">All</option>
-					<option value="zone1">Zone 1</option>
-					<option value="zone2">Zone 2</option>
-					<option value="zone3">Zone 3</option>
-					<option value="zone4">Zone 4</option>
-					<option value="zone5">Zone 5</option>
-					<option value="zone6">Zone 6</option>
-					<option value="zone7">Zone 7</option>
-					<option value="zone8">Zone 8</option>
-					<option value="zone9">Zone 9</option>
-					<option value="zone10">Zone 10</option>
-					<option value="zone11">Zone 11</option>
-					<option value="zone12">Zone 12</option>
-					<option value="zone13">Zone 13</option>
-					<option value="zone14">Zone 14</option>
-					<option value="zone15">Zone 15</option>
-					<option value="zone16">Zone 16</option>
-					<option value="zone17">Zone 17</option>
-					<option value="zone18">Zone 18</option>
-					<option value="zone19">Zone 19</option>
-					<option value="zone20">Zone 20</option>
+					<option value="Purok 1">Purok 1</option>
+					<option value="Purok 2">Purok 2</option>
+					<option value="Purok 3">Purok 3</option>
+					<option value="Purok 4">Purok 4</option>
+					<option value="Purok 5">Purok 5</option>
+					<option value="Purok 6">Purok 6</option>
+					<option value="Purok 7">Purok 7</option>
+					<option value="Purok 8">Purok 8</option>
+					<option value="Purok 9">Purok 9</option>
+					<option value="Purok 10">Purok 10</option>
+					<option value="Purok 11">Purok 11</option>
+					<option value="Purok 12">Purok 12</option>
+					<option value="Purok 13">Purok 13</option>
+					<option value="Purok 14">Purok 14</option>
+					<option value="Purok 15">Purok 15</option>
+					<option value="Purok 16">Purok 16</option>
+					<option value="Purok 17">Purok 17</option>
+					<option value="Purok 18">Purok 18</option>
+					<option value="Purok 19">Purok 19</option>
+					<option value="Purok 20">Purok 20</option>
 				</select>
 			</div>
 			<div>

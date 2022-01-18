@@ -61,6 +61,12 @@ header{
 	color: black;
 	box-sizing: border-box;
 }
+.sidebar #main{
+	width: 100px;
+	background-color: orange;
+	border-radius: 5px;
+}
+
 
 /*after the header codes in every page*/
 

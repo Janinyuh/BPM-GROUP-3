@@ -20,11 +20,7 @@
 	</header>
 	<div class="sidebar">
 		<a href="../home page/home.html"><span>Home</span></a>
-		<a href="../Add account/add account.php"><span>Add account</span></a>
-		<a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
-		<a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
-		<a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-		<a href="../Announcement/announcement.php"><span>Anouncement</span></a>
+		<a href="../Add account/add account.php" id="main"><span>Add account</span></a>
 		<a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
 	</div>
 
@@ -90,7 +86,11 @@
 					<option value="Purok-5">Purok-5</option>
 					<option value="Purok-6">Purok-6</option>
 				</select>
-			</div>
+				</div>
+				<div>
+					<label for="barangay">Barangay</label>
+					<input type="text" name="barangay" id="barangay">
+				</div>
 				<div>
 					<label for="phonenum">Phone Number</label>
 					<input type="text" name="phonenum" id="phonenum">

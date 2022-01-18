@@ -9,9 +9,15 @@
 
 .logo{
     width: 120px;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-left: 20px;
 
+}
+.header-box{
+    background-size: cover;
+    height: 60px;
+    background-color: #F2C12E;
+    border-radius: 8px;
 }
 
 .container{
