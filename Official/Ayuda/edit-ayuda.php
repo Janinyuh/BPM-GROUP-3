@@ -20,12 +20,9 @@
 	</header>
 	<div class="sidebar">
 		<a href="../home page/home.html"><span>Home</span></a>
-		<a href="../Add account/add account.php"><span>Add account</span></a>
 		<a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
-		<a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
+		<a href="../Ayuda/Ayuda.php" id="main"><span>Ayuda</span></a>
 		<a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-		<a href="../Announcement/announcement.php"><span>Anouncement</span></a>
-		<a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
 	</div>
 
 	<div class="content">
@@ -44,8 +41,6 @@
 		<div class="Add">
 			<label>User ID</label>
 			<input type = "text" value = "<?php echo $fetch['userID']?>" name = "userID" />
-			<label>Name</label>
-			<input type = "text" value = "<?php echo $fetch['name2']?>" name = "name2" />
 			<label>Amount</label>
 			<input type = "text" value = "<?php echo $fetch['amount']?>" name = "amount" />
 			<label>Date Claimed</label>

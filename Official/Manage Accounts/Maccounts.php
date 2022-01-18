@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Managae Accounts</title>
+	<title>Manage Accounts</title>
 	<link rel="stylesheet" type="text/css" href="Maccounts.css">
 </head>
 <body>
@@ -44,6 +44,7 @@
 		    <th>Age</th>
 		    <th>Sex</th>
 		    <th>Purok</th>
+		    <th>Barangay</th>
 		    <th>Phone Number</th>
 		    <th>Action</th>
 		  </tr>
@@ -61,6 +62,7 @@
 							<td><?php echo $fetch['age']?></td>
 							<td><?php echo $fetch['sex']?></td>
 							<td><?php echo $fetch['purok']?></td>
+							<td><?php echo $fetch['barangay']?></td>
 							<td><?php echo $fetch['phonenum']?></td>
     						<td><center></a><a href = "edit-user.php?userID=<?php echo $fetch['userID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-user.php?userID=<?php echo $fetch['userID']?>"><i></i><button> Delete</button></a></center></td>
   </tr>

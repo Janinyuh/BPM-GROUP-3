@@ -88,8 +88,13 @@
 				</select>
 				</div>
 				<div>
-					<label for="barangay">Barangay</label>
-					<input type="text" name="barangay" id="barangay">
+				<label for="barangay">Barangay</label>
+				<select name="barangay" id="barangay">
+					<option>All</option>
+					<option value="Gusa">Gusa</option>
+					<option value="Agusan">Agusan</option>
+					<option value="Bulua">Bulua</option>
+				</select>
 				</div>
 				<div>
 					<label for="phonenum">Phone Number</label>

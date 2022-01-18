@@ -20,12 +20,9 @@
     </header>
     <div class="sidebar">
         <a href="../home page/home.html"><span>Home</span></a>
-        <a href="../Add account/add account.php"><span>Add account</span></a>
         <a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
         <a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
-        <a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-        <a href="../Announcement/announcement.php"><span>Anouncement</span></a>
-        <a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
+        <a href="../Food pack/Food pack.php" id="main"><span>Food Packs</span></a>
     </div>
     <div class="content">
         <form action="fresult.php" method="get">

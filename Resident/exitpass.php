@@ -38,8 +38,7 @@
         <form class="card-form" action="exitpass-check.php" method="POST">
             
             <div class="action">
-                <input name= "submit" type="submit" class="action-button" value="SUBMIT">
-                
+                <input name= "submit" type="submit" class="action-button" value="SUBMIT">    
             </div>
         </form>
         <div class="card-info">

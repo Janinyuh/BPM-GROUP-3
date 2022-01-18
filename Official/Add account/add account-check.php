@@ -10,10 +10,12 @@ if (isset($_POST['submit'])) {
 	$age = $_POST['age'];
 	$sex = $_POST['sex'];
 	$purok = $_POST['purok'];
+	$barangay = $_POST['barangay'];
 	$phonenum = $_POST['phonenum'];
 	$userID = $_POST['userID'];
     $password = $_POST['password'];
     $repassword = $_POST['repassword'];
+    $spc = ' ';
    
     if($password !== $repassword){
         header("Location: add account.php?error=The confirmation password does not match&$user_data");
@@ -31,7 +33,7 @@ if (isset($_POST['submit'])) {
 			header("Location: add account.php?error=The User ID is taken. Try another&$user_data");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO users(Fname, Mname, Lname, age, sex, purok, phonenum, userID, password) VALUES('$Fname', '$Mname', '$Lname', '$age', '$sex', '$purok', '$phonenum',  '$userID', '$password')";
+           $sql2 = "INSERT INTO users(Fname, Mname, Lname, age, sex, purok, barangay, phonenum, userID, password, fullname) VALUES('$Fname', '$Mname', '$Lname', '$age', '$sex', '$purok', '$barangay', '$phonenum',  '$userID', '$password', '{$Fname}{$spc}{$Mname}{$spc}{$Lname}')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: add account.php?success=Your account has been created successfully.");

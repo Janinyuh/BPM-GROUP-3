@@ -75,6 +75,13 @@
 					<option value = "Purok-5" <?php if($fetch['purok'] == "Purok-5"){echo "selected";}?>>Purok-5</option>
 					<option value = "Purok-6" <?php if($fetch['purok'] == "Purok-6"){echo "selected";}?>>Purok-6</option>
 				</select>
+			<label>Barangay</label>
+				<select required = required name = "barangay">
+					<option value = "">All</option>
+					<option value = "Gusa" <?php if($fetch['barangay'] == "Gusa"){echo "selected";}?>>Gusa</option>
+					<option value = "Agusan" <?php if($fetch['barangay'] == "Agusan"){echo "selected";}?>>Agusan</option>
+					<option value = "Bulua" <?php if($fetch['barangay'] == "Bulua"){echo "selected";}?>>Bulua</option>
+				</select>
 			<label>Phone Number</label>
 			<input type = "text" value = "<?php echo $fetch['phonenum']?>" name = "phonenum" />
 			<button type="submit" name="edit-user" class="submit">Save</button>

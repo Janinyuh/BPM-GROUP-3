@@ -19,15 +19,15 @@
 			<img src="images/logo1.png" class="logo">
 
 		</div>
-	
+	<form action="aresult.php" method="get">
 	<div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm">
+      <input type="text" name="search" class="searchTerm" placeholder="Search">
       <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
      </button>
    </div>
 </div>
+</form>
 		<div class="container">
 			<div class="Ayuda">
 				<h1>AYUDA</h1>
@@ -76,7 +76,7 @@
 	 				<th>NAME</th>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT purok FROM users WHERE userID = ayuda.userID AND purok = ('$purok2') AND userID != ('$userID2'));") or die(mysqli_error());
+						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT purok FROM users WHERE userID = ayuda.userID AND purok = ('$purok2') AND userID != ('$userID2') AND barangay = ('$barangay'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							

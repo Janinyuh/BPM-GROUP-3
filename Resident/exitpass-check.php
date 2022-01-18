@@ -1,15 +1,19 @@
 <?php 
 session_start(); 
+require 'session.php';
 include "Connection/db_conn.php";
+
 
 if (isset($_POST['submit'])) {
 
-	$Fname2 = $_POST['Fname2'];
-	$Mname2 = $_POST['Mname2'];
-	$Lname2 = $_POST['Lname2'];
-	$purok3 = $_POST['purok2'];
+	$Fname3 = ($Fname3);
+	$Mname3 = ($Mname3);
+	$Lname3 = ($Lname3);
+	$purok2 = ($purok2);
+	$barangay = ($barangay);
 
-           $sql2 = "INSERT INTO exitpass (Fname2, Mname2, Lname2, purok2) VALUES('$Fname2', '$Mname2', '$Lname2', '$purok3')";
+
+           $sql2 = "INSERT INTO exitpass (Fname2, Mname2, Lname2, purok2, barangay) VALUES('$Fname3', '$Mname3', '$Lname3', '$purok2', '$barangay')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: exitpass.php?success=Your request has been sent successfully.");

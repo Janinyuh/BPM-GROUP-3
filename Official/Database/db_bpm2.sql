@@ -59,21 +59,22 @@ CREATE TABLE `exitpass` (
   `Fname2` varchar(50) NOT NULL,
   `Mname2` varchar(50) NOT NULL,
   `Lname2` varchar(50) NOT NULL,
-  `purok2` varchar(50) NOT NULL
+  `purok2` varchar(50) NOT NULL,
+  `barangay` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exitpass`
 --
 
-INSERT INTO `exitpass` (`epassID`, `Fname2`, `Mname2`, `Lname2`, `purok2`) VALUES
-(1, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1'),
-(2, 'Janina ', 'Al', 'Briones', 'Purok-1'),
-(3, 'Rhegie Joy', 'Baluran', 'Ayag', 'Purok-1'),
-(4, 'Ryle', 'Otaku', 'Glema', 'Purok-1'),
-(5, 'Elbert Laurence', 'Memer', 'Ligan', 'Purok-1'),
-(6, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1'),
-(7, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1');
+INSERT INTO `exitpass` (`epassID`, `Fname2`, `Mname2`, `Lname2`, `purok2`, `barangay`) VALUES
+(1, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1', 'Gusa'),
+(2, 'Janina ', 'Al', 'Briones', 'Purok-1', 'Gusa'),
+(3, 'Rhegie Joy', 'Baluran', 'Ayag', 'Purok-1', 'Gusa'),
+(4, 'Ryle', 'Otaku', 'Glema', 'Purok-1', 'Gusa'),
+(5, 'Elbert Laurence', 'Memer', 'Ligan', 'Purok-1', 'Gusa'),
+(6, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1', 'Gusa'),
+(7, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa');
 
 -- --------------------------------------------------------
 
@@ -115,25 +116,28 @@ CREATE TABLE `users` (
   `age` int(4) NOT NULL,
   `sex` varchar(10) NOT NULL,
   `purok` varchar(50) NOT NULL,
+  `barangay` varchar(50) NOT NULL,
   `phonenum` varchar(100) NOT NULL,
   `userID` int(11) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `role` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `purok`, `phonenum`, `userID`, `password`) VALUES
-('Julianne Marie', 'Langeras', 'Bajao', 21, 'female', 'Purok-1', '09561331001', 301, '34ed066df378efacc9b924ec161e7639'),
-('Janina', 'Al', 'Briones', 21, 'female', 'Purok-1', '09350995290', 302, '577bcc914f9e55d5e4e4f82f9f00e7d4'),
-('Rhegie Joy', 'Baluran', 'Ayag', 20, 'female', 'Purok-1', '09978875720', 303, '11b9842e0a271ff252c1903e7132cd68'),
-('Ryle', 'Otaku', 'Glema', 21, 'female', 'Purok-1', '09123456789', 304, '37bc2f75bf1bcfe8450a1a41c200364c'),
-('Elbert Laurence', 'Memer', 'Ligan', 21, 'male', 'Purok-1', '09234567891', 305, '496e05e1aea0a9c4655800e8a7b9ea28'),
-('Jinomel', 'idk', 'Fajardo', 22, 'male', 'Purok-1', '09345678912', 306, 'b2eb7349035754953b57a32e2841bda5'),
-('Azelia', 'Pausal', 'Layagon', 21, 'female', 'Purok-1A', '09456789123', 307, '8e98d81f8217304975ccb23337bb5761'),
-('Christine Angela', 'Mercado', 'Agum', 21, 'female', 'Purok-2B', '09567891234', 308, 'a8c88a0055f636e4a163a5e3d16adab7'),
-('Larissa ', 'Penaso', 'Cabal', 21, 'female', 'Purok-2C', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc');
+INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `purok`, `barangay`, `phonenum`, `userID`, `password`, `fullname`, `role`) VALUES
+('Julianne Marie', 'Langeras', 'Bajao', 21, 'female', 'Purok-1', 'Gusa', '09561331001', 301, '34ed066df378efacc9b924ec161e7639', 'Julianne Marie Langeras Bajao', 'user'),
+('Janina', 'Al', 'Briones', 21, 'female', 'Purok-1', 'Gusa', '09350995290', 302, '577bcc914f9e55d5e4e4f82f9f00e7d4', 'Janina Al Briones', 'user'),
+('Rhegie Joy', 'Baluran', 'Ayag', 20, 'female', 'Purok-1', 'Gusa', '09978875720', 303, '11b9842e0a271ff252c1903e7132cd68', 'Rhegie Joy Baluran Ayag', 'user'),
+('Ryle', 'Otaku', 'Glema', 21, 'female', 'Purok-1', 'Gusa', '09123456789', 304, '37bc2f75bf1bcfe8450a1a41c200364c', 'Ryle Otaku Glema', 'user'),
+('Elbert Laurence', 'Memer', 'Ligan', 21, 'male', 'Purok-1', 'Gusa', '09234567891', 305, '496e05e1aea0a9c4655800e8a7b9ea28', 'Elbert Laurence Memer Ligan', 'user'),
+('Jinomel', 'idk', 'Fajardo', 22, 'male', 'Purok-1', 'Gusa', '09345678912', 306, 'b2eb7349035754953b57a32e2841bda5', 'Jinomel idk Fajardo', 'user'),
+('Azelia', 'Pausal', 'Layagon', 21, 'female', 'Purok-1A', 'Gusa', '09456789123', 307, '8e98d81f8217304975ccb23337bb5761', 'Azelia Pausal Layagon', 'user'),
+('Christine Angela', 'Mercado', 'Agum', 21, 'female', 'Purok-2B', 'Gusa', '09567891234', 308, 'a8c88a0055f636e4a163a5e3d16adab7', 'Christine Angela Mercado Agum', 'user'),
+('Larissa ', 'Penaso', 'Cabal', 21, 'female', 'Purok-2C', 'Gusa', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc', 'Larissa Penaso Cabal', 'user');
 
 --
 -- Indexes for dumped tables

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
 <?php
 	require_once 'validate.php';
 	require 'session.php';
 ?>
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Barangay Pandemic Management System - Ayuda</title>
-	<link rel="stylesheet" href="fpack.css">
+	<link rel="stylesheet" href="ayuda.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<section id="header">
 		<div class="header-box">
-				<span></span>
-				<img src="images/logo1.png" class="logo">
-			</div>
-		<form action="fresult.php" method="get">
+			<span></span>
+			<img src="images/logo1.png" class="logo">
+
+		</div>
+	<form action="aresult.php" method="get">
 	<div class="wrap">
    <div class="search">
       <input type="text" name="search" class="searchTerm" placeholder="Search">
@@ -28,15 +29,13 @@
    </div>
 </div>
 </form>
-
 		<div class="container">
 			<div class="Ayuda">
-				<h1>FOOD PACKS</h1>
+				<h1>AYUDA</h1>
 			</div>
 
 		</div>
 	</section>
-
 	<nav id="sideNav">
 		<ul>
 			<li><a href="dashboard.php">BACK</a></li>
@@ -46,44 +45,21 @@
 	</nav>
 	<img src="images/menu.png" id="menu">
 
-<!-- start table ---->
-	<table class="table1">		
-  <tr>
-    <th>Me</th>
-    <th>Quantity</th>
-    <th>Date Claimed</th>
-  </tr>
-  <tbody>
-					<?php
-						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT name3, quantity, date_claimed FROM `foodpacks` WHERE userID = ('$userID2');") or die(mysqli_error());
-						while($fetch = $query->fetch_array()){
-					?>
-						<tr>
-							<td><?php echo $fetch['name3']?></td>
-							<td><?php echo $fetch['quantity']?></td>
-							<td><?php echo $fetch['date_claimed']?></td>
-						</tr>
-					<?php
-						}
-					?>	
-					</tbody>
-</table>
-
 <!--other table-->
-<h2 id="title2">My Neighbours</h2>
+<h2 id="title2">Search Results</h2>
 <div class="scrollable">
 <table class="table2">
-	<tbody>
+	 <tbody>
 	 				<th>NAME</th>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT purok FROM users WHERE userID = foodpacks.userID AND purok = ('$purok2') AND userID != ('$userID2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						$search = $_GET['search'];
+						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT * FROM users WHERE userID = ayuda.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							
 						<tr>
-							<td><?php echo $fetch['name3']?></td>
+							<td><?php echo $fetch['name2']?></td>
 						</tr>
 					<?php
 						}

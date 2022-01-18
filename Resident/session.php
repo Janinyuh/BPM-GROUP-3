@@ -6,7 +6,9 @@
 	$Mname3 = $fetch['Mname'];
 	$Lname3 = $fetch['Lname'];
 	$purok2 = $fetch['purok'];
+	$barangay = $fetch['barangay'];
 	$userID2 = $fetch['userID'];
+	$fullname = $fetch['fullname'];
 
 	
 ?>
