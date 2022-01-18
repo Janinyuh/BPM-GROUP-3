@@ -14,17 +14,27 @@
 
 <body>
 	<section id="header">
-		<div class="container">
-
+		<div class="header-box">
+			<span></span>
 			<img src="images/logo1.png" class="logo">
 
+		</div>
+	
+	<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+		<div class="container">
 			<div class="Ayuda">
 				<h1>AYUDA</h1>
 			</div>
 
 		</div>
 	</section>
-
 	<nav id="sideNav">
 		<ul>
 			<li><a href="dashboard.php">BACK</a></li>
