@@ -31,12 +31,18 @@ if (isset($_POST['userID']) && isset($_POST['password'])) {
 
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
-            if ($row['userID'] === $userID && $row['password'] === $password) {
+            if ($row['userID'] === $userID && $row['password'] === $password && $row['role'] == 'user' ) {
                 $_SESSION['purok'] = $row['purok'];
                 $_SESSION['userID'] = $row['userID'];
                 header("Location: dashboard.php");
                 exit();
-            }else{
+            }else if ($row['userID'] === $userID && $row['password'] === $password && $row['role'] == 'admin' ) {
+                $_SESSION['purok'] = $row['purok'];
+                $_SESSION['userID'] = $row['userID'];
+                header("Location: homepage/home.php");
+                exit();
+            }
+            else{
                 header("Location: login.php?error=Incorect user ID or password");
                 exit();
             }
