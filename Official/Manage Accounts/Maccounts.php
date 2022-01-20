@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-    require_once '../validate.php';
-    require '../session.php';
-?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -12,7 +8,7 @@
 <body>
 	<header>
 		<div class="log_out">
-			<a href="../logout.php" class="logout_btn"><h5>LOG OUT</h5></a>
+			<a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
 		</div>
 		<div class="title">
 			<h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
@@ -23,7 +19,7 @@
 		
 	</header>
 	<div class="sidebar">
-		<a href="../home page/home.php"><span>Home</span></a>
+		<a href="../home page/home.html"><span>Home</span></a>
 		<a href="../Add account/add account.php"><span>Add account</span></a>
 		<a href="../Manage Accounts/Maccounts.php" id="main"><span>Manage Accounts</span></a>
 	</div>
@@ -55,7 +51,7 @@
 		  <tbody>
 					<?php
 						require '../Connection/db_conn.php';
-						$query = $conn->query("SELECT *  FROM `users` WHERE barangay = ('$barangay') AND role != ('$role');") or die(mysqli_error());
+						$query = $conn->query("SELECT *  FROM `users`;") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 						<tr>

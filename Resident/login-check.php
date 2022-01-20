@@ -13,7 +13,6 @@ if (isset($_POST['userID']) && isset($_POST['password'])) {
 
     $userID = validate($_POST['userID']);
     $password = validate($_POST['password']);
-    $role = 'user';
 
     if (empty($userID)) {
         header("Location: login.php?error=User ID is required");
@@ -32,7 +31,7 @@ if (isset($_POST['userID']) && isset($_POST['password'])) {
 
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
-            if ($row['userID'] === $userID && $row['password'] === $password && $row['role'] === $role) {
+            if ($row['userID'] === $userID && $row['password'] === $password) {
                 $_SESSION['purok'] = $row['purok'];
                 $_SESSION['userID'] = $row['userID'];
                 header("Location: dashboard.php");

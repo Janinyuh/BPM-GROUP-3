@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2022 at 06:50 AM
--- Server version: 10.4.18-MariaDB
+-- Generation Time: Jan 14, 2022 at 11:41 AM
+-- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -74,8 +74,7 @@ INSERT INTO `exitpass` (`epassID`, `Fname2`, `Mname2`, `Lname2`, `purok2`, `bara
 (4, 'Ryle', 'Otaku', 'Glema', 'Purok-1', 'Gusa'),
 (5, 'Elbert Laurence', 'Memer', 'Ligan', 'Purok-1', 'Gusa'),
 (6, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1', 'Gusa'),
-(7, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa'),
-(10, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1', 'Gusa');
+(7, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa');
 
 -- --------------------------------------------------------
 
@@ -138,10 +137,7 @@ INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `purok`, `barangay
 ('Jinomel', 'idk', 'Fajardo', 22, 'male', 'Purok-1', 'Gusa', '09345678912', 306, 'b2eb7349035754953b57a32e2841bda5', 'Jinomel idk Fajardo', 'user'),
 ('Azelia', 'Pausal', 'Layagon', 21, 'female', 'Purok-1A', 'Gusa', '09456789123', 307, '8e98d81f8217304975ccb23337bb5761', 'Azelia Pausal Layagon', 'user'),
 ('Christine Angela', 'Mercado', 'Agum', 21, 'female', 'Purok-2B', 'Gusa', '09567891234', 308, 'a8c88a0055f636e4a163a5e3d16adab7', 'Christine Angela Mercado Agum', 'user'),
-('Larissa ', 'Penaso', 'Cabal', 21, 'female', 'Purok-2C', 'Gusa', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc', 'Larissa Penaso Cabal', 'user'),
-('Clark Neil', 'Langeras', 'Bajao', 16, 'male', 'Purok-2C', 'Gusa', '09561331001', 311, '9dfcd5e558dfa04aaf37f137a1d9d3e5', 'Clark Neil Langeras Bajao', 'users'),
-('Britney', 'Wong', 'Banaag', 21, 'female', 'Purok-1', 'Agusan', '09561331001', 312, '950a4152c2b4aa3ad78bdd6b366cc179', 'Britney Wong Banaag', 'user'),
-('Gusa', 'Gusa', 'Gusa', 0, '', 'All', 'Gusa', '0', 12345, '827ccb0eea8a706c4c34a16891f84e7b', 'Gusa Gusa Gusa', 'admin');
+('Larissa ', 'Penaso', 'Cabal', 21, 'female', 'Purok-2C', 'Gusa', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc', 'Larissa Penaso Cabal', 'user');
 
 --
 -- Indexes for dumped tables
@@ -187,7 +183,7 @@ ALTER TABLE `ayuda`
 -- AUTO_INCREMENT for table `exitpass`
 --
 ALTER TABLE `exitpass`
-  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `foodpacks`
