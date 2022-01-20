@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    require_once '../validate.php';
+    require '../session.php';
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +12,7 @@
 <body>
     <header>
         <div class="log_out">
-            <a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
+            <a href="../logout.php" class="logout_btn"><h5>LOG OUT</h5></a>
         </div>
         <div class="title">
             <h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
@@ -19,7 +23,7 @@
         
     </header>
     <div class="sidebar">
-        <a href="../home page/home.html"><span>Home</span></a>
+        <a href="../home page/home.php"><span>Home</span></a>
         <a href="../Add account/add account.php"><span>Add account</span></a>
         <a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
         <a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>

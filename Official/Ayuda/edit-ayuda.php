@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<div class="log_out">
-			<a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
+			<a href="../logout.php" class="logout_btn"><h5>LOG OUT</h5></a>
 		</div>
 		<div class="title">
 			<h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
