@@ -9,7 +9,7 @@
 
 .logo{
     width: 120px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 20px;
 
 }
@@ -54,11 +54,21 @@ nav ul li a:hover{
     transition: .3s;
 }
 
+.Ayuda{
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    letter-spacing: 30px;
+}
+
 
 #menu{
     width: 50px;
     position: fixed;
-    right: 60px;
+    right: 65px;
     top: 50px;
     z-index: 2;
     cursor: pointer;
@@ -82,9 +92,6 @@ hr{
 }
 
 .footer-left-col{
-    flex-basis: 50%;
-}
-.footer-right-col{
     flex-basis: 50%;
 }
 

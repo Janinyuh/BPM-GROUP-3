@@ -9,7 +9,7 @@
 
 .logo{
 	width: 120px;
-	margin-top: 5px;
+	margin-top: 0px;
 	margin-left: 20px;
 
 }
@@ -19,14 +19,13 @@
 	margin-left: 100px;
 }
 .Ayuda{
-	height: 50px;
-	letter-spacing: 10px;
-}
-.Ayuda h1{
-	text-align: center;
-	padding-top: 5px;
-	font-size: 30px;
-
+		width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    letter-spacing: 11px;
 }
 
 .search {
@@ -67,7 +66,7 @@
   width: 30%;
   position: absolute;
   left: 50%;
-  top: 6%;
+  top: 23%;
   transform: translate(-50%, -50%);
 }
 
@@ -111,12 +110,12 @@ nav ul li a:hover{
 
 
 #menu{
-	width: 50px;
-	position: fixed;
-	right: 60px;
-	top: 50px;
-	z-index: 2;
-	cursor: pointer;
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 50px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 /*=================================*/
@@ -205,9 +204,7 @@ hr{
 .footer-left-col{
 	flex-basis: 50%;
 }
-.footer-right-col{
-	flex-basis: 50%;
-}
+
 
 
 @media only screen and (max-width: 770px){

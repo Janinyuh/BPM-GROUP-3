@@ -297,9 +297,7 @@ hr{
 	flex-wrap: wrap;
 }
 
-.footer-left-col{
-	flex-basis: 50%;
-}
+
 .footer-right-col{
 	flex-basis: 50%;
 }

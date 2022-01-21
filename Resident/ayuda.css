@@ -21,13 +21,18 @@
 }
 
 .Ayuda{
-	letter-spacing: 10px;
+		width: 30%;
+    position: absolute;
+    left: 55%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    letter-spacing: 30px;
 }
 
-.Ayuda h1{
-	text-align: center;
-	font-size: 30px;
-
+.container{
+	margin-right: 100px;
+	margin-left: 100px;
 }
 .search {
   width: 100%;
@@ -67,7 +72,7 @@
   width: 30%;
   position: absolute;
   left: 50%;
-  top: 6%;
+  top: 23%;
   transform: translate(-50%, -50%);
 }
 
@@ -101,12 +106,12 @@ nav ul li a:hover{
 
 
 #menu{
-	width: 50px;
-	position: fixed;
-	right: 60px;
-	top: 50px;
-	z-index: 2;
-	cursor: pointer;
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 50px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 /*=================================*/
@@ -195,9 +200,6 @@ hr{
 .footer-left-col{
 	flex-basis: 50%;
 }
-.footer-right-col{
-	flex-basis: 50%;
-}
 
 
 @media only screen and (max-width: 770px){
@@ -245,6 +247,20 @@ hr{
 		  top: 6%;
 		  transform: translate(-50%, -50%);
 		}
-
-
+		.Ayuda{
+		width: 30%;
+    position: absolute;
+    left: 56%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    letter-spacing: 10px;
+}
+.wrap{
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translate(-50%, -50%);
+}
 }

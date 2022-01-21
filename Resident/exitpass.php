@@ -25,7 +25,7 @@
         <div class="card-image">    
             <h2 class="card-heading">
                 Exit Pass
-                <small>Just click the <br>'submit' button</small>
+                <small>Make a <br>request here.</small>
             </h2>
         </div>
         <?php if (isset($_GET['error'])) { ?>
@@ -36,9 +36,25 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
         <form class="card-form" action="exitpass-check.php" method="POST">
-            
+            <div class="input">
+                <input type="text" name="Fname2" class="input-field" required/>
+                <label class="input-label">First Name</label>
+            </div>
+                        <div class="input">
+                <input type="text" name="Mname2" class="input-field" required/>
+                <label class="input-label">Middle Name</label>
+            </div>
+            <div class="input">
+                <input type="text" name="Lname2" class="input-field" required/>
+                <label class="input-label">Last Name</label>
+            </div>
+            <div class="input">
+                <input type="text" name="purok2" class="input-field" required/>
+                <label class="input-label">Purok</label>
+            </div>
             <div class="action">
-                <input name= "submit" type="submit" class="action-button" value="SUBMIT">    
+                <input name= "submit" type="submit" class="action-button" value="SUBMIT">
+                
             </div>
         </form>
         <div class="card-info">
@@ -46,6 +62,10 @@
         </div>
     </div>
 </div>
+
+    <div class="Ayuda">
+                <h1>EXIT PASS</h1>
+            </div>
 
     <nav id="sideNav">
         <ul>
@@ -60,14 +80,10 @@
     <div class="container footer-row">
         <hr>
         <div class="footer-left-col">
-             <section id="header">
-       
-    </section>
-        </div>
-        <div class="footer-right-col">
             <p>© The Barangay Pandemic Management System</p>
         </div>
     </div>
+</section>
 </section>
 
 

@@ -105,12 +105,8 @@
 	<div class="container footer-row">
 		<hr>
 		<div class="footer-left-col">
-			<p>..</p>
-		</div>
-		<div class="footer-right-col">
 			<p>© The Barangay Pandemic Management System</p>
 		</div>
-	</div>
 </section>
 
 

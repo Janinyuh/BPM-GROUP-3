@@ -9,9 +9,8 @@
 
 .logo{
     width: 120px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 20px;
-
 }
 .header-box{
     background-size: cover;
@@ -57,12 +56,11 @@ nav ul li a:hover{
 #menu{
     width: 50px;
     position: fixed;
-    right: 60px;
+    right: 65px;
     top: 50px;
     z-index: 2;
     cursor: pointer;
 }
-
 /* footer */
 #footer{
     padding:  50px 0 30px;
@@ -72,7 +70,15 @@ hr{
     border: 0;
     border-top: 1px solid #f67c92;
 }
-
+.Ayuda{
+    width: 30%;
+    position: absolute;
+    left: 55%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    letter-spacing: 10px;
+}
 .footer-row{
     display: flex;
     align-items: center;
@@ -81,9 +87,6 @@ hr{
 }
 
 .footer-left-col{
-    flex-basis: 50%;
-}
-.footer-right-col{
     flex-basis: 50%;
 }
 

@@ -16,14 +16,20 @@
 </head>
 
 <body>
-   
+    <div class="header-box">
+            <span></span>
+            <img src="images/logo1.png" class="logo">
+        </div>
+        <div class="Ayuda">
+                <h1>SETTINGS</h1>
+            </div>
     <div class="container">
     <!-- code here -->
     <div class="card">
         <div class="card-image">    
             <h2 class="card-heading">
-                Edit your Profile here!
-                <small>Do not forget to <br>click "SAVE"</small>
+                Welcome to SETTINGS
+                <small>Edit your <br>Profile here</small>
             </h2>
         </div>
         <?php if (isset($_GET['error'])) { ?>
@@ -77,13 +83,6 @@
     <div class="container footer-row">
         <hr>
         <div class="footer-left-col">
-             <section id="header">
-        <div class="container">
-            <img src="images/logo1.png" class="logo">
-        </div>
-    </section>
-        </div>
-        <div class="footer-right-col">
             <p>© The Barangay Pandemic Management System</p>
         </div>
     </div>

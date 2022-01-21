@@ -18,23 +18,21 @@
 				<span></span>
 				<img src="images/logo1.png" class="logo">
 			</div>
-		<form action="fresult.php" method="get">
-	<div class="wrap">
+			
+			<div class="wrap">
    <div class="search">
-      <input type="text" name="search" class="searchTerm" placeholder="Search">
+      <input type="text" class="searchTerm">
       <button type="submit" class="searchButton">
-       
+        <i class="fa fa-search"></i>
      </button>
    </div>
 </div>
-</form>
 
-		<div class="container">
+		
 			<div class="Ayuda">
 				<h1>FOOD PACKS</h1>
 			</div>
 
-		</div>
 	</section>
 
 	<nav id="sideNav">
@@ -78,7 +76,7 @@
 	 				<th>NAME</th>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT purok FROM users WHERE userID = foodpacks.userID AND purok = ('$purok2') AND userID != ('$userID2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT purok FROM users WHERE userID = foodpacks.userID AND purok = ('$purok2') AND userID != ('$userID2'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							
@@ -119,9 +117,6 @@
 	<div class="container footer-row">
 		<hr>
 		<div class="footer-left-col">
-			<p>..</p>
-		</div>
-		<div class="footer-right-col">
 			<p>© The Barangay Pandemic Management System</p>
 		</div>
 	</div>
