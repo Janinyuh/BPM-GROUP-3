@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap');
 .example {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -17,7 +18,7 @@ header{
 	margin: 0;
 	width: 100%;
 	height: 8%;
-	background: yellow;
+	background: #F2C12E;
 	z-index: 1;
 }
 .title{
@@ -33,7 +34,7 @@ header{
 .log_out{
 	margin-top: -10px;
 	padding:  0;
-	margin-right: 20px;
+	margin-right: 5px;
 	float: right;
 }
 .logout_btn{
@@ -68,7 +69,7 @@ header{
 	box-sizing: border-box;
 }
 .sidebar #main{
-	width: 100px;
+	width: 120px;
 	background-color: orange;
 	border-radius: 5px;
 }

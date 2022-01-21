@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Announcements</title>
 	<link rel="stylesheet" type="text/css" href="announcement.css">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
