@@ -19,22 +19,22 @@
 				<img src="images/logo1.png" class="logo">
 			</div>
 			
-			<div class="wrap">
+	<form action="fresult.php" method="get">
+	<div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm">
+      <input type="text" name="search" class="searchTerm" placeholder="Search">
       <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
      </button>
    </div>
 </div>
-
-		
+</form>
+		<div class="container">
 			<div class="Ayuda">
-				<h1>FOOD PACKS</h1>
+				<h1>FOOD PACK</h1>
 			</div>
 
+		</div>
 	</section>
-
 	<nav id="sideNav">
 		<ul>
 			<li><a href="dashboard.php">BACK</a></li>

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+    require_once '../Connection/validate.php';
+    require '../Connection/session.php';
+?>
+<html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +13,7 @@
 <body>
     <header>
         <div class="log_out">
-            <a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
+            <a href="../Logout/logout.php" class="logout_btn"><h5>LOG OUT</h5></a>
         </div>
         <div class="title">
             <h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
@@ -19,7 +24,7 @@
         
     </header>
     <div class="sidebar">
-        <a href="../home page/home.html"><span>Home</span></a>
+        <a href="../home page/home.php"><span>Home</span></a>
         <a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
         <a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
         <a href="../Food pack/Food pack.php" id="main"><span>Food Packs</span></a>
@@ -47,7 +52,7 @@
                     <?php
                         require_once '../Connection/db_conn.php';
                         $search = $_GET['search'];
-                        $query = $conn->query("SELECT * FROM foodpacks WHERE userID LIKE '%$search%' OR name3 LIKE '%$search%' ORDER BY fpackID DESC") or die(mysqli_error());
+                        $query = $conn->query("SELECT * FROM foodpacks WHERE userID LIKE '%$search%' AND barangay =('$barangay') OR name3 LIKE '%$search%' AND barangay =('$barangay') ORDER BY fpackID DESC") or die(mysqli_error());
                         while($fetch = $query->fetch_array()){
                     ?>  
                         <tr>

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+    require_once '../Connection/validate.php';
+    require '../Connection/session.php';
+?>
+<html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +13,7 @@
 <body>
     <header>
         <div class="log_out">
-            <a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
+            <a href="../Logout/logout.php" class="logout_btn"><h5>LOG OUT</h5></a>
         </div>
         <div class="title">
             <h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
@@ -19,7 +24,7 @@
         
     </header>
     <div class="sidebar">
-        <a href="../home page/home.html"><span>Home</span></a>
+        <a href="../home page/home.php"><span>Home</span></a>
         <a href="../Add account/add account.php"><span>Add account</span></a>
         <a href="../Manage Accounts/Maccounts.php" id="main"><span>Manage Accounts</span></a>
     </div>
@@ -48,8 +53,9 @@
 <tbody>
                     <?php
                         require_once '../Connection/db_conn.php';
+                        require '../Connection/session.php';
                         $search = $_GET['search'];
-                        $query = $conn->query("SELECT * FROM users WHERE userID LIKE '%$search%' OR Fname LIKE '%$search%' OR Mname LIKE '%$search%' OR Lname LIKE '%$search%' ORDER BY userID DESC") or die(mysqli_error());
+                        $query = $conn->query("SELECT * FROM users WHERE userID !=('$userID2') AND userID LIKE '%$search%' AND barangay =('$barangay') OR Fname LIKE '%$search%' AND barangay =('$barangay') OR Mname LIKE '%$search%' AND barangay =('$barangay') OR Lname LIKE '%$search%' AND barangay =('$barangay') ORDER BY userID DESC") or die(mysqli_error());
                         while($fetch = $query->fetch_array()){
                     ?>  
                         <tr>
