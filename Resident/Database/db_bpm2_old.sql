@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2022 at 02:48 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.19
+-- Generation Time: Jan 22, 2022 at 06:14 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,26 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_bpm2`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `announcements`
---
-
-CREATE TABLE `announcements` (
-  `id` int(11) NOT NULL,
-  `Mbarangay` varchar(255) NOT NULL,
-  `MZP` varchar(255) NOT NULL,
-  `announcement2` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `announcements`
---
-
-INSERT INTO `announcements` (`id`, `Mbarangay`, `MZP`, `announcement2`) VALUES
-(8, '[\"Gusa\",\"Agusan\"]', '[\"Purok-1\"]', 'The Barangay Pandemic Management System, offers easy transactions of giving ayuda to the residents, easily distributing the Exit Passes,Food Packs will be given in order.');
 
 -- --------------------------------------------------------
 
@@ -68,8 +48,7 @@ INSERT INTO `ayuda` (`ayudaID`, `userID`, `name2`, `amount`, `barangay`, `date_c
 (5, 305, 'Laurence Ligan', 3000, 'Gusa', '2022-01-12'),
 (6, 306, 'Jinomel Fajardo', 4000, 'Gusa', ''),
 (7, 310, 'Larissa Cabal', 3000, 'Gusa', ''),
-(8, 312, 'Britney Wong Banaag', 400, 'Agusan', ''),
-(9, 1, '1 1 1', 1000, 'Gusa', '2022-01-23');
+(8, 312, 'Britney Wong Banaag', 400, 'Agusan', '');
 
 -- --------------------------------------------------------
 
@@ -99,8 +78,7 @@ INSERT INTO `exitpass` (`epassID`, `Fname2`, `Mname2`, `Lname2`, `purok2`, `bara
 (6, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1', 'Gusa'),
 (7, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa'),
 (10, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1', 'Gusa'),
-(11, 'Britney', 'Wong', 'Banaag', 'Purok-1', 'Agusan'),
-(12, '1', '1', '1', 'Purok-1', 'Gusa');
+(11, 'Britney', 'Wong', 'Banaag', 'Purok-1', 'Agusan');
 
 -- --------------------------------------------------------
 
@@ -157,8 +135,6 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `purok`, `barangay`, `phonenum`, `userID`, `password`, `fullname`, `role`) VALUES
-('1', '1', '1', 1, '', 'Purok-1', 'Gusa', '1', 1, 'c4ca4238a0b923820dcc509a6f75849b', '1 1 1', 'user'),
-('3', '3', '3', 3, 'female', 'Purok-2A', 'Bulua', '3', 3, 'eccbc87e4b5ce2fe28308fd9f2a7baf3', '3 3 3', 'user'),
 ('Julianne Marie', 'Langeras', 'Bajao', 21, 'female', 'Purok-1', 'Gusa', '09561331001', 301, '34ed066df378efacc9b924ec161e7639', 'Julianne Marie Langeras Bajao', 'user'),
 ('Janina', 'Al', 'Briones', 21, 'female', 'Purok-1', 'Gusa', '09350995290', 302, '577bcc914f9e55d5e4e4f82f9f00e7d4', 'Janina Al Briones', 'user'),
 ('Rhegie Joy', 'Baluran', 'Ayag', 20, 'female', 'Purok-1', 'Gusa', '09978875720', 303, '11b9842e0a271ff252c1903e7132cd68', 'Rhegie Joy Baluran Ayag', 'user'),
@@ -170,18 +146,11 @@ INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `purok`, `barangay
 ('Larissa ', 'Penaso', 'Cabal', 21, 'female', 'Purok-2C', 'Gusa', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc', 'Larissa Penaso Cabal', 'user'),
 ('Clark Neil', 'Langeras', 'Bajao', 16, 'male', 'Purok-2C', 'Gusa', '09561331001', 311, '9dfcd5e558dfa04aaf37f137a1d9d3e5', 'Clark Neil Langeras Bajao', 'users'),
 ('Britney', 'Wong', 'Banaag', 21, 'female', 'Purok-1', 'Agusan', '09561331001', 312, '950a4152c2b4aa3ad78bdd6b366cc179', 'Britney Wong Banaag', 'user'),
-('2', '2', '2', 1, '', 'Purok-1', 'Gusa', '12', 456, '250cf8b51c773f3f8dc8b4be867a9a02', '2 2 2', 'admin'),
-('Admin', 'Admin', 'Admin', 21, 'female', 'Purok-1', 'Gusa', '12', 12345, '827ccb0eea8a706c4c34a16891f84e7b', 'Admin Admin Admin', 'admin');
+('Gusa', 'Gusa', 'Gusa', 0, '', 'All', 'Gusa', '0', 12345, '827ccb0eea8a706c4c34a16891f84e7b', 'Gusa Gusa Gusa', 'admin');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `announcements`
---
-ALTER TABLE `announcements`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `ayuda`
@@ -214,22 +183,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `announcements`
---
-ALTER TABLE `announcements`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
 -- AUTO_INCREMENT for table `ayuda`
 --
 ALTER TABLE `ayuda`
-  MODIFY `ayudaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ayudaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `exitpass`
 --
 ALTER TABLE `exitpass`
-  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `foodpacks`

@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <?php
-    require_once 'validate.php';
-    require 'session.php';
+require_once 'validate.php';
+require 'session.php';
+include "Connection/db_conn.php";
+
+$announcement = "select * from announcements ";
+$user = "SELECT userID, barangay, purok FROM users WHERE userID={$_SESSION['userID']}";
+$result = mysqli_query($conn, $announcement);
+$result1 = mysqli_query($conn, $user);
+
+$barangayArr = [];
+$purokArr = [];
+$ann = [];
+$check_announce = false;
+while($data = mysqli_fetch_array($result)) {
+    $barangay = json_decode($data['Mbarangay']);
+    $purok = json_decode($data['MZP'],true);
+    $barangayArr[] = $barangay;
+    $purokArr[] = $purok;
+    $ann[] = $data['announcement2'];
+
+}
+
+while($data = mysqli_fetch_array($result1)) {
+    foreach ($barangayArr as $barVal ){
+        foreach ($barVal as $bar){
+            if ($bar === $data[1]){
+                foreach ($purokArr as $purVal ){
+                    foreach ($purVal as $pur){
+                        if($data[2] === $pur){
+                           $check_announce = true;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
 ?>
 <html>
 
@@ -39,9 +76,19 @@
                 <h3>Announcements</h3>
             </div>
             <div class="announcement">
-                <textarea style="overflow: auto;resize: none;"readonly="readonly" id="says" name="says" rows="5" cols="40">
-  The Barangay Pandemic Management System, offers easy transactions of giving ayuda to the residents, easily distributing the Exit Passes,Food Packs will be given in order.
-  </textarea>
+               <div class="wrapp">
+                   <table style="">
+                       <?php
+                       if ($check_announce == true){
+                           foreach ($ann as $an){
+                               echo '<tr><p style="border-bottom: #eeeeee solid 1px">'.$an.'</p></tr>';
+                           }
+                       }
+                       ?>
+
+                   </table>
+               </div>
+
             </div>
             
         </div>

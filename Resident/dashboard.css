@@ -220,7 +220,7 @@ hr{
     font-size: 18px;
     text-align:left;
     align-items: center;
-    height: 305px;
+    height: 200px;
     width: 290px;
     outline: none;
 }
@@ -229,7 +229,11 @@ hr{
 
 
 
-
+div.wrapp {
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 400px; // change this to desired height
+}
 
 
 
@@ -361,15 +365,15 @@ hr{
     border: 1px solid black;
 }
 
-        #says{
-            margin-left: 10px;
-            border: none;
-            background: none;
-            font-size: 18px;
-            text-align:left;
-            align-items: center;
-            height: 300px;
-            width: 250px;
-        }
+        /*#says{*/
+        /*    margin-left: 10px;*/
+        /*    border: none;*/
+        /*    background: none;*/
+        /*    font-size: 18px;*/
+        /*    text-align:left;*/
+        /*    align-items: center;*/
+        /*    height: 300px;*/
+        /*    width: 250px;*/
+        /*}*/
 
 }

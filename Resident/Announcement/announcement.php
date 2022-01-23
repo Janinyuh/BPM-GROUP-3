@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <?php
-	require_once '../Connection/validate.php';
-	require '../Connection/session.php';
+require_once '../Connection/validate.php';
+require '../Connection/session.php';
+include "../Connection/db_conn.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $selectedBarangay = $_POST['Mbarangay'];
+    $selectedPurok = $_POST['MZP'];
+    $announcement = $_POST['announcement2'];
+    $json_barangay = json_encode($selectedBarangay);
+    $json_purok= json_encode($selectedPurok);
+
+    $sql2 = "INSERT INTO announcements (Mbarangay, MZP, announcement2) VALUES('$json_barangay', '$json_purok', '$announcement')";
+    $result = mysqli_query($conn, $sql2);
+		header("location: announcement.php");
+
+
+}
 ?>
 <html>
 <html>
@@ -30,53 +45,12 @@
 	</div>
 
 	<div class="content">
-		<form action="" method="POST">
-			<h3>Simple Barangay Selection</h3>
-			<div>
-				<label for="barangay">Barangay</label>
-				<select name="barangay" id="barangay">
-					<option value="AllB">All</option>
-					<option value="Gusa">Gusa</option>
-					<option value="Agusan">Agusan</option>
-					<option value="Bulua">Bulua</option>
-				</select>
-			</div>
-			<div>
-				<label for="ZP">Zone/Purok</label>
-				<select name="ZP" id="ZP">
-					<option value="AllZP">All</option>
-					<option value="Purok 1">Purok 1</option>
-					<option value="Purok 2">Purok 2</option>
-					<option value="Purok 3">Purok 3</option>
-					<option value="Purok 4">Purok 4</option>
-					<option value="Purok 5">Purok 5</option>
-					<option value="Purok 6">Purok 6</option>
-					<option value="Purok 7">Purok 7</option>
-					<option value="Purok 8">Purok 8</option>
-					<option value="Purok 9">Purok 9</option>
-					<option value="Purok 10">Purok 10</option>
-					<option value="Purok 11">Purok 11</option>
-					<option value="Purok 12">Purok 12</option>
-					<option value="Purok 13">Purok 13</option>
-					<option value="Purok 14">Purok 14</option>
-					<option value="Purok 15">Purok 15</option>
-					<option value="Purok 16">Purok 16</option>
-					<option value="Purok 17">Purok 17</option>
-					<option value="Purok 18">Purok 18</option>
-					<option value="Purok 19">Purok 19</option>
-					<option value="Purok 20">Purok 20</option>
-				</select>
-			</div>
-			<div>
-				<label for="announcment">Announcement</label>
-				<textarea name="announcment" id="announcment"></textarea>
-			</div>
+		<form action="announcement.php" method="POST">
 			<h3>Multiple Barangay Selection</h3>
 			<p>Note: Press "ctrl" + select the barangays and zones you want to disseminate announcements to.</p>
 			<div>
 				<label for="Mbarangay">Barangay</label>
-				<select name="Mbarangay" id="Mbarangay" multiple>
-					<option value="AllB">All</option>
+				<select name="Mbarangay[]" id="Mbarangay" multiple>
 					<option value="Gusa">Gusa</option>
 					<option value="Agusan">Agusan</option>
 					<option value="Bulua">Bulua</option>
@@ -84,32 +58,32 @@
 			</div>
 			<div>
 				<label for="MZP">Zone/Purok</label>
-				<select name="MZP" id="MZP" multiple>
-					<option value="Purok 1">Purok 1</option>
-					<option value="Purok 2">Purok 2</option>
-					<option value="Purok 3">Purok 3</option>
-					<option value="Purok 4">Purok 4</option>
-					<option value="Purok 5">Purok 5</option>
-					<option value="Purok 6">Purok 6</option>
-					<option value="Purok 7">Purok 7</option>
-					<option value="Purok 8">Purok 8</option>
-					<option value="Purok 9">Purok 9</option>
-					<option value="Purok 10">Purok 10</option>
-					<option value="Purok 11">Purok 11</option>
-					<option value="Purok 12">Purok 12</option>
-					<option value="Purok 13">Purok 13</option>
-					<option value="Purok 14">Purok 14</option>
-					<option value="Purok 15">Purok 15</option>
-					<option value="Purok 16">Purok 16</option>
-					<option value="Purok 17">Purok 17</option>
-					<option value="Purok 18">Purok 18</option>
-					<option value="Purok 19">Purok 19</option>
-					<option value="Purok 20">Purok 20</option>
+				<select name="MZP[]" id="MZP" multiple>
+					<option value="Purok-1">Purok 1</option>
+					<option value="Purok-2">Purok 2</option>
+					<option value="Purok-3">Purok 3</option>
+					<option value="Purok-4">Purok 4</option>
+					<option value="Purok-5">Purok 5</option>
+					<option value="Purok-6">Purok 6</option>
+					<option value="Purok-7">Purok 7</option>
+					<option value="Purok-8">Purok 8</option>
+					<option value="Purok-9">Purok 9</option>
+					<option value="Purok-10">Purok 10</option>
+					<option value="Purok-11">Purok 11</option>
+					<option value="Purok-12">Purok 12</option>
+					<option value="Purok-13">Purok 13</option>
+					<option value="Purok-14">Purok 14</option>
+					<option value="Purok-15">Purok 15</option>
+					<option value="Purok-16">Purok 16</option>
+					<option value="Purok-17">Purok 17</option>
+					<option value="Purok-18">Purok 18</option>
+					<option value="Purok-19">Purok 19</option>
+					<option value="Purok-20">Purok 20</option>
 				</select>
 			</div>
 			<div>
-				<label for="announcment2">Announcement</label>
-				<textarea name="announcment2" id="announcment2"></textarea>
+				<label for="announcement2">Announcement</label>
+				<textarea name="announcement2" id="announcement2"></textarea>
 			</div>
 			<button type="reset">Reset</button>
 			<button type="submit">Submit</button>
