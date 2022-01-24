@@ -29,13 +29,7 @@
 	</div>
 
 	<div class="content">
-		<form action="mresult.php" method="get">
-		<div class="Cheader">
-			<label>Search Bar</label>
-			<input type="text" name="search" id="searchbar" placeholder="Input text here!">
-			<button type="submit" >Search</button>
-		</div>
-		</form>
+		
 		</p>		
 					<?php
 						require '../Connection/db_conn.php';
