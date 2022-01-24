@@ -1,73 +1,108 @@
 <!DOCTYPE html>
+<?php
+	require_once 'validate.php';
+	require 'session.php';
+?>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Ayuda</title>
-    <link rel="stylesheet" type="text/css" href="ayuda.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barangay Pandemic Management System - Ayuda</title>
+	<link rel="stylesheet" href="ayuda.css">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="log_out">
-            <a href="log_out" class="logout_btn"><h5>LOG OUT</h5></a>
-        </div>
-        <div class="title">
-            <h5>BARANGAY PANDEMIC MANAGEMENT SYSTEM</h5>
-        </div>
-        <div class="logobox">
-            <img src="logo1.png" class="logo">
-        </div>
-        
-    </header>
-    <div class="sidebar">
-        <a href="../home page/home.html"><span>Home</span></a>
-        <a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
-        <a href="../Ayuda/Ayuda.php" id="main"><span>Ayuda</span></a>
-        <a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-    </div>
-    <div class="content">
-        <form action="aresult.php" method="get">
-        <div class="Cheader">
-            <label>Search Bar</label>
-            <input type="text" name="search" id="searchbar" placeholder="Input text here!">
-            <button type="submit" >Search</button>
-        </div>
-        </form>
-    <table class="table1">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Date Claimed</th>
-            <th>Action</th>
 
-        </tr>
-        </thead>
-<tbody>
-                    <?php
-                        require_once '../Connection/db_conn.php';
-                        $search = $_GET['search'];
-                        $query = $conn->query("SELECT * FROM ayuda WHERE userID LIKE '%$search%' OR name2 LIKE '%$search%' ORDER BY ayudaID DESC") or die(mysqli_error());
-                        while($fetch = $query->fetch_array()){
-                    ?>  
-                        <tr>
-                            <td><?php echo $fetch['ayudaID']?></td>
-                            <td><?php echo $fetch['name2']?></td>
-                            <td><?php echo $fetch['amount']?></td>
-                            <td><?php echo $fetch['date_claimed']?></td>
-                            <td><center></a><a href = "edit-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button> Delete</button></a></center></td>
-                        </tr>
-                <?php
-                    }
-                ?>
+<body>
+	<section id="header">
+		<div class="header-box">
+			<span></span>
+			<img src="images/logo1.png" class="logo">
+
+		</div>
+	<form action="aresult.php" method="get">
+	<div class="wrap">
+   <div class="search">
+      <input type="text" name="search" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+       
+     </button>
+   </div>
+</div>
+</form>
+		<div class="container">
+			<div class="Ayuda">
+				<h1>AYUDA</h1>
+			</div>
+
+		</div>
+	</section>
+	<nav id="sideNav">
+		<ul>
+			<li><a href="dashboard.php">BACK</a></li>
+			<li><a href="settings.php">SETTINGS</a></li>
+			<li><a href="logout.php">LOGOUT</a></li>
+		</ul>
+	</nav>
+	<img src="images/menu.png" id="menu">
+
+<!--other table-->
+<h2 id="title2">Search Results</h2>
+<div class="scrollable">
+<table class="table2">
+	 <tbody>
+	 				<th>NAME</th>
+					<?php
+						require 'Connection/db_conn.php';
+						$search = $_GET['search'];
+						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT * FROM users WHERE userID = ayuda.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						while($fetch = $query->fetch_array()){
+					?>
+							
+						<tr>
+							<td><?php echo $fetch['name2']?></td>
+						</tr>
+					<?php
+						}
+					?>	
+					</tbody>
+
+	
+
+</table>
+</div>
+<!-- end table ---->
+
+
+
+
+
+	<script>
+		var menu = document.getElementById("menu");
+		var sideNav = document.getElementById("sideNav");
+
+		sideNav.style.right='-250px';
+		menu.onclick = function(){
+			if(sideNav.style.right=='-250px'){
+				sideNav.style.right ="0";
+			}
+			else{
+				sideNav.style.right = "-250px";
+			}
+		}
+	</script>
+
+	<section id="footer">
+	<div class="container footer-row">
+		<hr>
+		<div class="footer-left-col">
+			<p>..</p>
+		</div>
+		<div class="footer-right-col">
+			<p>© The Barangay Pandemic Management System</p>
+		</div>
+	</div>
+</section>
+
 </body>
-<script src = "../js/jquery.js"></script>   
-<script type = "text/javascript">
-    function confirmationDelete(anchor){
-        var conf = confirm("Are you sure you want to delete this record?");
-        if(conf){
-            window.location = anchor.attr("href");
-        }
-    } 
-</script>
+
 </html>
