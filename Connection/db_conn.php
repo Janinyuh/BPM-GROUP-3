@@ -1,9 +1,4 @@
-<?php
 
-//$sname= "localhost";
-// $unmae= "root";
-// $password = "";
-// $db_name = "db_bpm2";
 //remote connection
 $sname= "remotemysql.com";
 $unmae= "KWi8ARojlD";
