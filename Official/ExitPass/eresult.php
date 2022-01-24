@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Exit Pass</title>
     <link rel="stylesheet" type="text/css" href="exitpass.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,12 +21,9 @@
     </header>
     <div class="sidebar">
         <a href="../home page/home.html"><span>Home</span></a>
-        <a href="../Add account/add account.php"><span>Add account</span></a>
-        <a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
+        <a href="../ExitPass/exitpass.php" id="main"><span>Exit Pass</span></a>
         <a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
         <a href="../Food pack/Food pack.php"><span>Food Packs</span></a>
-        <a href="../Announcement/announcement.php"><span>Anouncement</span></a>
-        <a href="../Manage Accounts/Maccounts.php"><span>Manage Accounts</span></a>
     </div>
     <div class="content">
         <form action="eresult.php" method="get">

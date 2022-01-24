@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Manage Accounts</title>
 	<link rel="stylesheet" type="text/css" href="Maccounts.css">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -20,7 +21,7 @@
 	</header>
 	<div class="sidebar">
 		<a href="../home page/home.html"><span>Home</span></a>
-		<a href="../Add account/add account.php"><span>Add account</span></a>
+		<a href="../Add account/add account.php"><span>Add Account</span></a>
 		<a href="../Manage Accounts/Maccounts.php" id="main"><span>Manage Accounts</span></a>
 	</div>
 
