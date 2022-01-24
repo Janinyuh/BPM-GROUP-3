@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+	font-family: alata;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url(test3.png);
+	background-size: cover;
+}
+header{
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 8%;
+	background: #F2C12E;
+}
+.title{
+	height: 1px;
+}
+.title h5{
+	margin: 15px;
+	text-align: center;
+	font-size: 18px;
+	margin-left: 10%;
+
+}
+.log_out{
+	margin-top: -10px;
+	padding:  0;
+	margin-right: 20px;
+	float: right;
+}
+.logout_btn{
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+.logobox{
+	margin-left: 10px;
+	margin-top: -20px;
+}
+.logo{
+	height: 50px;
+	width: 50px;
+}
+.sidebar{
+	top: 8%;
+	padding: 10px;
+	margin: 0;
+	position: fixed;
+	height: 100%;
+	width: 150px;
+	background-color: dimgray;
+}
+.sidebar a{
+	display: block;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding-left: 10px;
+	text-decoration: none;
+	color: black;
+	box-sizing: border-box;
+}
+.sidebar #main{
+	width: 110px;
+	background-color: orange;
+	border-radius: 5px;
+}
+
+/*after the header codes in every page*/
+
+.content{
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	margin-top: 5%;
+	margin-left: 15%;
+	/*outline: 2px solid black;*/    /*the outline for checking the size of the content*/
+}
+.content label{
+	font-weight: bold;
+}
+.first{
+	margin-left: 10px;
+	float: left;
+}
+.second{
+	margin-left: 10px;
+	float: left;
+}
+.third{
+	width: 300px;
+	margin-left: 10px;
+}
+.third div{
+	margin-bottom: 15px;
+}
+.third input{
+	margin-left: 10px;
+	float: right;
+}
+.fourth{
+	margin-left: 10px;
+}
+.fourth button{
+	margin-left: 10px;
+	height: 40px;
+	width: 80px;
+	outline: none;
+	border: 1px #ccc;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.reset{
+	background-color: orangered;
+}
+.submit{
+	background-color: #31BAD9;
+}
