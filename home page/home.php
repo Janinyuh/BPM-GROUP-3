@@ -40,7 +40,7 @@
 			<a href="../Announcement/announcement.php"><button id="ann"><h1>Announcements</h1></button></a>
 		</div>
 		<div class="Bbuttons">
-			<a href="../Ayuda/ayuda.php"><button id="Aepfp"><h1>Ayuda/Exit Pass/Food Pack</h1></button></a>
+			<a href="../Ayuda/Ayuda.php"><button id="Aepfp"><h1>Ayuda/Exit Pass/Food Pack</h1></button></a>
 		</div>
 	</div>
 </body>

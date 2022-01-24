@@ -5,7 +5,7 @@
 ?>
 <html>
 <html>
-<head>
+<head>     
 	<meta charset="utf-8">
 	<title>Ayuda</title>
 	<link rel="stylesheet" type="text/css" href="ayuda.css">
