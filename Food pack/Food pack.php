@@ -27,7 +27,7 @@
 	<div class="sidebar">
 		<a href="../home page/home.php"><span>Home</span></a>
 		<a href="../ExitPass/exitpass.php"><span>Exit Pass</span></a>
-		<a href="../Ayuda/Ayuda.php"><span>Ayuda</span></a>
+		<a href="../Ayuda/ayuda.php"><span>Ayuda</span></a>
 		<a href="../Food pack/Food pack.php" id="main"><span>Food Packs</span></a>
 	</div>
 
