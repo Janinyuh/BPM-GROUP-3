@@ -61,7 +61,7 @@
         </div>
     </section>
         </div>
-        <div class="footer-right-col">
+        <div class="footer-left-col">
             <p>© The Barangay Pandemic Management System</p>
         </div>
     </div>

@@ -19,10 +19,10 @@
     <div class="header-box">
             <span></span>
             <img src="images/logo1.png" class="logo">
-        </div>
-        <div class="Ayuda">
+            <div class="Ayuda">
                 <h1>SETTINGS</h1>
             </div>
+        </div>
     <div class="container">
     <!-- code here -->
     <div class="card">
@@ -47,6 +47,10 @@
                     
         <form  method="POST" class="card-form" >
         <div class="message"><?php if(isset($message)) { echo $message; } ?></div>
+            <div>
+            <label>User ID: </label><label><?php echo $userID2?></td></label><br>
+            <label>Name: </label><label><?php echo $fullname?></td></label><br><br>
+            </div>
             <div class="input">
                 <input type="text" value = "<?php echo $fetch['phonenum']?>" name="phonenum" class="input-field" required/>
                 <label class="input-label">Phone Number</label>

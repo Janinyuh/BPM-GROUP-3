@@ -18,7 +18,6 @@
 				<span></span>
 				<img src="images/logo1.png" class="logo">
 			</div>
-			
 	<form action="fresult.php" method="get">
 	<div class="wrap">
    <div class="search">
@@ -28,13 +27,15 @@
    </div>
 </div>
 </form>
+
 		<div class="container">
 			<div class="Ayuda">
-				<h1>FOOD PACK</h1>
+				<h1>FOOD PACKS</h1>
 			</div>
 
 		</div>
 	</section>
+
 	<nav id="sideNav">
 		<ul>
 			<li><a href="dashboard.php">BACK</a></li>
@@ -45,6 +46,7 @@
 	<img src="images/menu.png" id="menu">
 
 <!-- start table ---->
+<div class="container-table">
 	<table class="table1">		
   <tr>
     <th>Me</th>
@@ -91,6 +93,7 @@
 	
 
 </table>
+</div>
 </div>
 <!-- end table ---->
 

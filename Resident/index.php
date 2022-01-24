@@ -107,6 +107,7 @@
 		<div class="footer-left-col">
 			<p>© The Barangay Pandemic Management System</p>
 		</div>
+	</div>
 </section>
 
 

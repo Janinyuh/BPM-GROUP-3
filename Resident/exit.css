@@ -17,6 +17,7 @@
     height: 60px;
     background-color: #F2C12E;
     border-radius: 8px;
+    margin-bottom: 10%;
 }
 
 .container{
@@ -51,6 +52,15 @@ nav ul li a:hover{
     color: black;
     transition: .3s;
 }
+.Ayuda{
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    letter-spacing: 15px;
+}
 
 
 #menu{
@@ -70,15 +80,7 @@ hr{
     border: 0;
     border-top: 1px solid #f67c92;
 }
-.Ayuda{
-    width: 30%;
-    position: absolute;
-    left: 55%;
-    top: 6%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    letter-spacing: 10px;
-}
+
 .footer-row{
     display: flex;
     align-items: center;

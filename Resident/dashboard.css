@@ -232,7 +232,7 @@ hr{
 div.wrapp {
     overflow:hidden;
     overflow-y: scroll;
-    height: 400px; // change this to desired height
+    height: 450px; // change this to desired height
 }
 
 

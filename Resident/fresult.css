@@ -28,11 +28,6 @@
     letter-spacing: 11px;
 }
 
-.container-table{
-	width: 100%;
-	height: 100vh;
-}
-
 .search {
   width: 100%;
   position: relative;
@@ -75,7 +70,10 @@
   transform: translate(-50%, -50%);
 }
 
-
+.container-table{
+	width: 100%;
+	height: 100vh;
+}
 
 .header-box{
 	background-size: cover;
@@ -125,7 +123,9 @@ nav ul li a:hover{
 
 /*=================================*/
 /*Start of table code*/
-.table1{
+
+
+.table2{
 	margin-top: 10px;
 	width: 100%;
 	background: #F2E9D8 ;
@@ -133,36 +133,9 @@ nav ul li a:hover{
 	border-color: red;
 
 }
-.table1 th, td{
+.table2 th, td{
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	
-}
-.table1 th{
-	border-bottom: 0.5px solid black;
-	border-width: 10%;
-	padding-bottom: 8px;
-}
-.table1 td{
-	background-color: #E0DBD2;
-}
-
-.table-bgnd{
-	width: 110%;
-	background-color: red;
-}
-#title2{
-	margin-left: 10px;
-}
-
-.table2{
-	width: 100%;
-
-}
-.table2 th{
-	align-content: center;
-	letter-spacing: 8px;
 	padding-bottom: 10px;
 
 }

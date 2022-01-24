@@ -52,11 +52,16 @@ while($data = mysqli_fetch_array($result1)) {
 </head>
 
 <body>
-    <section id="header">
-        <div class="container">
-            <h1>Dashboard</h1>
 
+    <section id="header">
+         <div class="header-box">
+            <span></span>
+            <img src="images/logo1.png" class="logo">
         </div>
+        <div class="dash">
+            <h3>DASHBOARD</h3>
+        </div>
+        
         <section id="boxes">
         <div class="boxleft">
 
@@ -64,7 +69,7 @@ while($data = mysqli_fetch_array($result1)) {
                 <h3>A Y U D A</h3>
             </button>
             <button class="boxb" onclick="document.location='fpack.php'">
-                <h3>F O O D  <br>P A C K S</h3>
+                <h3>F O O D P A C K S</h3>
             </button>
             <button class="boxc" onclick="document.location='exitpass.php'">
                 <h3>E X I T <br>P A S S</h3>
@@ -75,8 +80,10 @@ while($data = mysqli_fetch_array($result1)) {
             <div class="box1">
                 <h3>Announcements</h3>
             </div>
+
+
             <div class="announcement">
-               <div class="wrapp">
+                <div class="wrapp">
                    <table style="">
                        <?php
                        if ($check_announce == true){
@@ -87,8 +94,7 @@ while($data = mysqli_fetch_array($result1)) {
                        ?>
 
                    </table>
-               </div>
-
+            <textarea style="overflow: auto;resize: none;"readonly="readonly" id="says" name="says" rows="8" cols="45"></textarea>
             </div>
             
         </div>
@@ -109,9 +115,6 @@ while($data = mysqli_fetch_array($result1)) {
     <div class="container footer-row">
         <hr>
         <div class="footer-left-col">
-            <img src="images/logo1.png" class="logo">
-        </div>
-        <div class="footer-right-col">
             <p>© The Barangay Pandemic Management System</p>
         </div>
     </div>

@@ -28,13 +28,12 @@
    </div>
 </div>
 </form>
-		<div class="container">
+		
 			<div class="Ayuda">
 				<h1>AYUDA</h1>
 			</div>
-
-		</div>
 	</section>
+
 	<nav id="sideNav">
 		<ul>
 			<li><a href="dashboard.php">BACK</a></li>
@@ -45,6 +44,7 @@
 	<img src="images/menu.png" id="menu">
 
 <!-- start table ---->
+<div class="container-table">
 	<table class="table1">		
   <tr>
     <th>Me</th>
@@ -76,7 +76,7 @@
 	 				<th>NAME</th>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT purok FROM users WHERE userID = ayuda.userID AND purok = ('$purok2') AND userID != ('$userID2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT purok FROM users WHERE userID = ayuda.userID AND purok = ('$purok2') AND userID != ('$userID2'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							
@@ -88,9 +88,8 @@
 					?>	
 					</tbody>
 
-	
-
 </table>
+</div>
 </div>
 <!-- end table ---->
 
@@ -117,9 +116,6 @@
 	<div class="container footer-row">
 		<hr>
 		<div class="footer-left-col">
-			<p>..</p>
-		</div>
-		<div class="footer-right-col">
 			<p>© The Barangay Pandemic Management System</p>
 		</div>
 	</div>

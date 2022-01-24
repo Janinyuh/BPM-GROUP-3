@@ -113,6 +113,10 @@ nav ul li a:hover{
     z-index: 2;
     cursor: pointer;
 }
+.container-table{
+	width: 100%;
+	height: 100vh;
+}
 
 /*=================================*/
 /*Start of table code*/
@@ -165,7 +169,7 @@ nav ul li a:hover{
 /* The scrollable part */
 
 .scrollable {
-  height: 150px;
+  height: 300px;
   overflow-y: scroll;
   border-bottom: 1px solid #ddd;
 }
