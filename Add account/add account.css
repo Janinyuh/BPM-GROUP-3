@@ -97,6 +97,9 @@ header{
 .third div{
 	margin-bottom: 15px;
 }
+#birthday{
+	width: 170px;
+}
 .third input{
 	margin-left: 10px;
 	float: right;

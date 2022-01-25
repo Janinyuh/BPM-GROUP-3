@@ -45,6 +45,8 @@
 			<input type="text" name="userID" id="userID" placeholder="User ID">
 			<label>Amount</label>
 			<input type="text" name="amount" id="Amount" placeholder="Amount">
+			<label>Date to Claim</label>
+			<input type="Date" name="date_to_claimed" id="date_to_claimed">
 			<label>Date Claimed</label>
 			<input type="Date" name="date_claimed" id="date_claimed">
 			<button type="submit" name="add-ayuda" class="submit">Add</button>
@@ -55,6 +57,7 @@
 		  	<th>#</th>
 		    <th>Names</th>
 		    <th>Amount</th>
+		    <th>Date to Claim</th>
 		    <th>Date Claimed</th>
 		    <th>Action</th>
 		  </tr>

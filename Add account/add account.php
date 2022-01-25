@@ -72,7 +72,12 @@
 			</div>
 			<br>
 			<br>
+			
 			<div class="third">
+				<div>
+				<label for="birthday">Birthday</label>
+				<input type="Date" name="birthday" id="birthday">
+				</div>
 				<div>
 				<label for="purok">Purok</label>
 				<select name="purok" id="purok">
@@ -108,7 +113,7 @@
 				<div>
 				<label for="userID">User ID</label>
 				<input type="text" name="userID" id="userID" required>
-			</div>
+				</div>
 				<div>
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password">

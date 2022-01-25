@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <title>Ayuda</title>
     <link rel="stylesheet" type="text/css" href="ayuda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -43,6 +44,7 @@
             <th>#</th>
             <th>Name</th>
             <th>Amount</th>
+            <th>Date to Claim</th>
             <th>Date Claimed</th>
             <th>Action</th>
 

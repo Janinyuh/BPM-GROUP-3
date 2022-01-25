@@ -48,6 +48,7 @@
 		    <th>Last Name</th>
 		    <th>Age</th>
 		    <th>Sex</th>
+		    <th>Birthday</th>
 		    <th>Purok</th>
 		    <th>Barangay</th>
 		    <th>Phone Number</th>

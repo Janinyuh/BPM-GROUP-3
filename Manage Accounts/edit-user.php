@@ -53,6 +53,8 @@
 					<option value = "male" <?php if($fetch['sex'] == "male"){echo "selected";}?>>Male</option>
 					<option value = "female" <?php if($fetch['sex'] == "female"){echo "selected";}?>>Female</option>
 			</select>
+			<label>Birthday</label>
+			<input type = "Date" value = "<?php echo $fetch['birthday']?>" name = "birthday" />
 			<label>Purok</label>
 				<select required = required name = "purok">
 					<option value = "">All</option>

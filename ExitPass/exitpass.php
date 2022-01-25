@@ -46,6 +46,8 @@
 		    <th>Middle Name</th>
 		    <th>Last Name</th>
 		    <th>Purok</th>
+		    <th>Date</th>
+		    <th>Quantity</th>
 		    <th>Action</th>
 		  </tr>
 		  <tbody>
