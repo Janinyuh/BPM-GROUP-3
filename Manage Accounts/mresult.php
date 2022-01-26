@@ -45,6 +45,7 @@
             <th>Last Name</th>
             <th>Age</th>
             <th>Sex</th>
+            <th>Birthday</th>
             <th>Purok</th>
             <th>Phone Number</th>
             <th>Action</th>
@@ -65,6 +66,7 @@
                             <td><?php echo $fetch['Lname']?></td>
                             <td><?php echo $fetch['age']?></td>
                             <td><?php echo $fetch['sex']?></td>
+                            <td><?php echo $fetch['birthday']?></td>
                             <td><?php echo $fetch['purok']?></td>
                             <td><?php echo $fetch['phonenum']?></td>
                             <td><center></a><a href = "edit-user.php?userID=<?php echo $fetch['userID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-user.php?userID=<?php echo $fetch['userID']?>"><i></i><button> Delete</button></a></center></td>

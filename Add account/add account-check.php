@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 	$Lname = $_POST['Lname'];
 	$age = $_POST['age'];
 	$sex = $_POST['sex'];
+	$birthday = $_POST['birthday'];
 	$purok = $_POST['purok'];
 	$barangay = $_POST['barangay'];
 	$phonenum = $_POST['phonenum'];
@@ -33,7 +34,7 @@ if (isset($_POST['submit'])) {
 			header("Location: add account.php?error=The User ID is taken. Try another&$user_data");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO users(Fname, Mname, Lname, age, sex, purok, barangay, phonenum, userID, password, fullname, role) VALUES('$Fname', '$Mname', '$Lname', '$age', '$sex', '$purok', '$barangay', '$phonenum',  '$userID', '$password', '{$Fname}{$spc}{$Mname}{$spc}{$Lname}', 'user')";
+           $sql2 = "INSERT INTO users(Fname, Mname, Lname, age, sex, birthday, purok, barangay, phonenum, userID, password, fullname, role) VALUES('$Fname', '$Mname', '$Lname', '$age', '$sex', '$birthday', '$purok', '$barangay', '$phonenum',  '$userID', '$password', '{$Fname}{$spc}{$Mname}{$spc}{$Lname}', 'user')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: add account.php?success=Your account has been created successfully.");

@@ -54,7 +54,7 @@
 					<?php
 						require 'Connection/db_conn.php';
 						$search = $_GET['search'];
-						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT * FROM users WHERE userID = ayuda.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						$query = $conn->query("SELECT ayuda.name2 FROM `ayuda` WHERE EXISTS (SELECT * FROM users WHERE userID = ayuda.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay') OR userID = ayuda.userID AND userID LIKE  '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							

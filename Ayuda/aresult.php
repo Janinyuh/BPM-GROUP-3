@@ -62,6 +62,7 @@
                             <td><?php echo $fetch['ayudaID']?></td>
                             <td><?php echo $fetch['name2']?></td>
                             <td><?php echo $fetch['amount']?></td>
+                            <td><?php echo $fetch['date_toclaim']?></td>
                             <td><?php echo $fetch['date_claimed']?></td>
                             <td><center></a><a href = "edit-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button> Delete</button></a></center></td>
                         </tr>

@@ -45,7 +45,7 @@
             <th>Middle Name</th>
             <th>Last Name</th>
             <th>Purok</th>
-            <th>Date</th>
+            <th>Date Requested</th>
             <th>Quantity</th>
             <th>Action</th>
 
@@ -55,7 +55,7 @@
                     <?php
                         require_once '../Connection/db_conn.php';
                         $search = $_GET['search'];
-                        $query = $conn->query("SELECT * FROM exitpass WHERE Fname2 LIKE '%$search%' AND barangay =('$barangay') OR Mname2 LIKE '%$search%' AND barangay =('$barangay') OR Lname2 LIKE '%$search%' AND barangay =('$barangay') ORDER BY epassID DESC") or die(mysqli_error());
+                        $query = $conn->query("SELECT * FROM exitpass WHERE userID !=('$userID2') AND userID LIKE '%$search%' AND barangay=('$barangay') OR Fname2 LIKE '%$search%' AND barangay =('$barangay') OR Mname2 LIKE '%$search%' AND barangay =('$barangay') OR Lname2 LIKE '%$search%' AND barangay =('$barangay') ORDER BY epassID DESC") or die(mysqli_error());
                         while($fetch = $query->fetch_array()){
                     ?>  
                         <tr>
@@ -64,6 +64,8 @@
                             <td><?php echo $fetch['Mname2']?></td>
                             <td><?php echo $fetch['Lname2']?></td>
                             <td><?php echo $fetch['purok2']?></td>
+                            <td><?php echo $fetch['date_requested']?></td>
+                            <td><?php echo $fetch['quantity']?></td>
                             <td><center></a><a onclick = "confirmationDelete(this); return false;" href = "delete-exitpass.php?epassID=<?php echo $fetch['epassID']?>"><i></i><button> Delete</button></a></center></td>
                         </tr>
                 <?php

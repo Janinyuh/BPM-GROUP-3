@@ -50,7 +50,7 @@
 			<label>Amount</label>
 			<input type = "text" value = "<?php echo $fetch['amount']?>" name = "amount" />
 			<label>Date to Claim</label>
-			<input type = "Date" value = "<?php echo $fetch['date_to_claimed']?>" name = "date_to_claimed" />
+			<input type = "Date" value = "<?php echo $fetch['date_toclaim']?>" name = "date_toclaim" />
 			<label>Date Claimed</label>
 			<input type = "Date" value = "<?php echo $fetch['date_claimed']?>" name = "date_claimed" />
 			<button type="submit" name="edit-ayuda" class="submit">Save</button>

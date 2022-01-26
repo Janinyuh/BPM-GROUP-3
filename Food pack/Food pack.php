@@ -45,6 +45,8 @@
 			<input type="text" name="userID" id="userID" placeholder="User ID">
 			<label>Quantity</label>
 			<input type="text" name="quantity" id="quantity" placeholder="Quantity">
+			<label>Date to Claim</label>
+			<input type="Date" name="date_toclaim" id="date_toclaim">
 			<label>Date Claimed</label>
 			<input type="Date" name="date_claimed" id="date_claimed">
 			<button type="submit" name="add-foodpack" class="submit">Add</button>
@@ -55,6 +57,7 @@
 		  	<th>#</th>
 		    <th>Names</th>
 		    <th>Quantity</th>
+		    <th>Date to Claim</th>
 		    <th>Date Claimed</th>
 		    <th>Action</th>
 		  </tr>
@@ -68,6 +71,7 @@
 							<td><?php echo $fetch['fpackID']?></td>
 							<td><?php echo $fetch['name3']?></td>
 							<td><?php echo $fetch['quantity']?></td>
+							<td><?php echo $fetch['date_toclaim']?></td>
 							<td><?php echo $fetch['date_claimed']?></td>
     						<td><center></a><a href = "edit-foodpack.php?fpackID=<?php echo $fetch['fpackID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-foodpack.php?fpackID=<?php echo $fetch['fpackID']?>"><i></i><button> Delete</button></a></center></td>
   </tr>

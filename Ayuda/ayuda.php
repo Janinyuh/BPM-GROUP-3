@@ -46,7 +46,7 @@
 			<label>Amount</label>
 			<input type="text" name="amount" id="Amount" placeholder="Amount">
 			<label>Date to Claim</label>
-			<input type="Date" name="date_to_claimed" id="date_to_claimed">
+			<input type="Date" name="date_toclaim" id="date_toclaim">
 			<label>Date Claimed</label>
 			<input type="Date" name="date_claimed" id="date_claimed">
 			<button type="submit" name="add-ayuda" class="submit">Add</button>
@@ -73,6 +73,7 @@
 							<td><?php echo $fetch['ayudaID']?></td>
 							<td><?php echo $fetch['name2']?></td>
 							<td><?php echo $fetch['amount']?></td>
+							<td><?php echo $fetch['date_toclaim']?></td>
 							<td><?php echo $fetch['date_claimed']?></td>
     						<td><center></a><a href = "edit-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button>Edit</button></a><a onclick = "confirmationDelete(this); return false;" href = "delete-ayuda.php?ayudaID=<?php echo $fetch['ayudaID']?>"><i></i><button> Delete</button></a></center></td>
   </tr>

@@ -18,15 +18,15 @@
 				<span></span>
 				<img src="images/logo1.png" class="logo">
 			</div>
-			
-			<div class="wrap">
+	<form action="fresult.php" method="get">
+	<div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="search">
+      <input type="text" name="search" class="searchTerm" placeholder="Search">
       <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
      </button>
    </div>
 </div>
+</form>
 
 		<div class="container">
 			<div class="Ayuda">
@@ -58,7 +58,7 @@
 					<?php
 						require 'Connection/db_conn.php';
 						$search = $_GET['search'];
-						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT * FROM users WHERE userID = foodpacks.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
+						$query = $conn->query("SELECT foodpacks.name3 FROM `foodpacks` WHERE EXISTS (SELECT * FROM users WHERE userID = foodpacks.userID AND fullname LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay') OR userID = foodpacks.userID AND userID LIKE '%$search%' AND purok = ('$purok2') AND barangay = ('$barangay'));") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 							

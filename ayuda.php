@@ -49,17 +49,19 @@
   <tr>
     <th>Me</th>
     <th>Amount</th>
+    <th>Date to Claim</th>
     <th>Date Claimed</th>
   </tr>
   <tbody>
 					<?php
 						require 'Connection/db_conn.php';
-						$query = $conn->query("SELECT name2, amount, date_claimed FROM `ayuda` WHERE userID = ('$userID2');") or die(mysqli_error());
+						$query = $conn->query("SELECT name2, amount, date_toclaim, date_claimed FROM `ayuda` WHERE userID = ('$userID2');") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 						<tr>
 							<td><?php echo $fetch['name2']?></td>
 							<td><?php echo $fetch['amount']?></td>
+							<td><?php echo $fetch['date_toclaim']?></td>
 							<td><?php echo $fetch['date_claimed']?></td>
 						</tr>
 					<?php

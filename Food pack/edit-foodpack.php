@@ -52,6 +52,8 @@
 			<input type = "text" value = "<?php echo $fetch['name3']?>" name = "name3" />
 			<label>Quantity</label>
 			<input type = "text" value = "<?php echo $fetch['quantity']?>" name = "quantity" />
+			<label>Date to Claim</label>
+			<input type = "Date" value = "<?php echo $fetch['date_toclaim']?>" name = "date_toclaim" />
 			<label>Date Claimed</label>
 			<input type = "Date" value = "<?php echo $fetch['date_claimed']?>" name = "date_claimed" />
 			<button type="submit" name="edit-foodpack" class="submit">Save</button>

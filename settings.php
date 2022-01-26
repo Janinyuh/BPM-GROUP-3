@@ -55,7 +55,11 @@
                 <input type="text" value = "<?php echo $fetch['phonenum']?>" name="phonenum" class="input-field" required/>
                 <label class="input-label">Phone Number</label>
             </div>
-                        <div class="input">
+            <div class="input">
+                <input type="date" value = "<?php echo $fetch['birthday']?>" name="birthday" class="input-field" required/>
+                <label class="input-label">Birthday</label>
+            </div>
+                <div class="input">
                 <input type="text" value = "<?php echo $fetch['age']?>" name="age" class="input-field" required/>
                 <label class="input-label">Age</label>
             </div>

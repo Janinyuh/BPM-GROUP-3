@@ -67,6 +67,7 @@
 							<td><?php echo $fetch['Lname']?></td>
 							<td><?php echo $fetch['age']?></td>
 							<td><?php echo $fetch['sex']?></td>
+							<td><?php echo $fetch['birthday']?></td>
 							<td><?php echo $fetch['purok']?></td>
 							<td><?php echo $fetch['barangay']?></td>
 							<td><?php echo $fetch['phonenum']?></td>
