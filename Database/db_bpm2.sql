@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2022 at 01:49 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.3.27
+-- Generation Time: Jan 27, 2022 at 07:18 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -86,23 +86,23 @@ CREATE TABLE `exitpass` (
   `purok2` varchar(50) NOT NULL,
   `barangay` varchar(50) NOT NULL,
   `date_requested` varchar(50) NOT NULL,
-  `quantity` int(2) NOT NULL
+  `quantity` int(11) NOT NULL,
+  `submit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exitpass`
 --
 
-INSERT INTO `exitpass` (`epassID`, `userID`, `Fname2`, `Mname2`, `Lname2`, `purok2`, `barangay`, `date_requested`, `quantity`) VALUES
-(1, 301, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(2, 302, 'Janina ', 'Al', 'Briones', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(3, 303, 'Rhegie Joy', 'Baluran', 'Ayag', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(4, 304, 'Ryle', 'Otaku', 'Glema', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(5, 305, 'Elbert Laurence', 'Memer', 'Ligan', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(6, 306, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(7, 308, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa', '2022-01-12', 1),
-(11, 312, 'Britney', 'Wong', 'Banaag', 'Purok-1', 'Agusan', '2022-01-12', 1),
-(15, 0, 'Larissa ', 'Penaso', 'Cabal', 'Purok-2C', 'Gusa', '2022-01-26', 0);
+INSERT INTO `exitpass` (`epassID`, `userID`, `Fname2`, `Mname2`, `Lname2`, `purok2`, `barangay`, `date_requested`, `quantity`, `submit`) VALUES
+(2, 302, 'Janina ', 'Al', 'Briones', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(3, 303, 'Rhegie Joy', 'Baluran', 'Ayag', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(4, 304, 'Ryle', 'Otaku', 'Glema', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(5, 305, 'Elbert Laurence', 'Memer', 'Ligan', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(6, 306, 'Jinomel', 'IDK', 'Fajardo', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(7, 308, 'Christine Angela', 'Mercado', 'Agum', 'Purok-1', 'Gusa', '2022-01-12', 2, 1),
+(11, 312, 'Britney', 'Wong', 'Banaag', 'Purok-1', 'Agusan', '2022-01-12', 1, 0),
+(27, 301, 'Julianne Marie', 'Langeras', 'Bajao', 'Purok-1', 'Gusa', '2022-01-27', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -170,7 +170,7 @@ INSERT INTO `users` (`Fname`, `Mname`, `Lname`, `age`, `sex`, `birthday`, `purok
 ('Azelia', 'Pausal', 'Layagon', 21, 'female', '2000-01-12', 'Purok-1A', 'Gusa', '09456789123', 307, '8e98d81f8217304975ccb23337bb5761', 'Azelia Pausal Layagon', 'user'),
 ('Christine Angela', 'Mercado', 'Agum', 21, 'female', '2000-01-12', 'Purok-2B', 'Gusa', '09567891234', 308, 'a8c88a0055f636e4a163a5e3d16adab7', 'Christine Angela Mercado Agum', 'user'),
 ('Larissa ', 'Penaso', 'Cabal', 21, 'female', '2000-01-12', 'Purok-2C', 'Gusa', '09901234567', 310, '06eb61b839a0cefee4967c67ccb099dc', 'Larissa Penaso Cabal', 'user'),
-('Clark Neil', 'Langeras', 'Bajao', 16, 'male', '2000-01-12', 'Purok-2C', 'Gusa', '09561331001', 311, '9dfcd5e558dfa04aaf37f137a1d9d3e5', 'Clark Neil Langeras Bajao', 'users'),
+('Clark Neil', 'Langeras', 'Bajao', 16, 'male', '2000-01-12', 'Purok-2C', 'Gusa', '09561331001', 311, '9dfcd5e558dfa04aaf37f137a1d9d3e5', 'Clark Neil Langeras Bajao', 'user'),
 ('Britney', 'Wong', 'Banaag', 21, 'female', '2000-01-12', 'Purok-1', 'Agusan', '09561331001', 312, '950a4152c2b4aa3ad78bdd6b366cc179', 'Britney Wong Banaag', 'user'),
 ('Admin', 'Admin', 'Admin', 21, 'female', '', 'Purok-1', 'Gusa', '12', 12345, '827ccb0eea8a706c4c34a16891f84e7b', 'Admin Admin Admin', 'admin');
 
@@ -230,7 +230,7 @@ ALTER TABLE `ayuda`
 -- AUTO_INCREMENT for table `exitpass`
 --
 ALTER TABLE `exitpass`
-  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `epassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `foodpacks`

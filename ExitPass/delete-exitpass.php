@@ -1,7 +1,10 @@
 <?php 
 require_once '../Connection/db_conn.php';
 
-	$sql = "DELETE FROM `exitpass` WHERE `epassID` = '$_REQUEST[epassID]'";
+	$quan = ($_REQUEST[quantity] - 1);
+	$sql = "UPDATE `exitpass` SET quantity='$quan',submit='0' WHERE `epassID` = '$_REQUEST[epassID]'";
+//	echo $sql;
+//	exit();
 	$result = mysqli_query($conn, $sql);
 	header("location:exitpass.php");
 

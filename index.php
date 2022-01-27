@@ -17,7 +17,6 @@
 		<div class = "header-text">
 			<h1>The Barangay <br> 
 			Pandemic Management</h1>
-				
 			<p>This website helps you manage,  
 				<br>facilitate announcements 
 				and <br>needs in your own barangay.</p>	

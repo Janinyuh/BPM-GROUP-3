@@ -53,7 +53,7 @@
 		  <tbody>
 					<?php
 						require '../Connection/db_conn.php';
-						$query = $conn->query("SELECT *  FROM `exitpass` WHERE barangay = ('$barangay');") or die(mysqli_error());
+						$query = $conn->query("SELECT *  FROM `exitpass`") or die(mysqli_error());
 						while($fetch = $query->fetch_array()){
 					?>
 						<tr>
@@ -64,8 +64,12 @@
 							<td><?php echo $fetch['purok2']?></td>
 							<td><?php echo $fetch['date_requested']?></td>
                             <td><?php echo $fetch['quantity']?></td>
-    						<td><center></a><a onclick = "confirmationDelete(this); return false;" href = "delete-exitpass.php?epassID=<?php echo $fetch['epassID']?>"><i></i><button> Delete</button></a></center></td>
-  </tr>
+                            <?php if($fetch['submit'] == 1 && $fetch['quantity'] !=0) { ?>
+    						<td style="text-align: center;"></a><a onclick = "confirmationDelete(this); return false;" href = "delete-exitpass.php?epassID=<?php echo $fetch['epassID']?>&quantity=<?php echo $fetch['quantity'] ?>"><i></i><button> Approve</button></a></td>
+                            <?php }else{ ?>
+                                <td>Approved</td>
+                            <?php } ?>
+                        </tr>
  					 <?php
 						}
 					?>	
@@ -76,7 +80,7 @@
 <script src = "../js/jquery.js"></script>	
 <script type = "text/javascript">
 	function confirmationDelete(anchor){
-		var conf = confirm("Are you sure you want to delete this record?");
+		var conf = confirm("Are you sure you want to approve this record?");
 		if(conf){
 			window.location = anchor.attr("href");
 		}

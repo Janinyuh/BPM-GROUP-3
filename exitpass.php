@@ -2,6 +2,17 @@
 <?php
     require_once 'validate.php';
     require 'session.php';
+    include "Connection/db_conn.php";
+    $user = "SELECT submit, quantity FROM exitpass WHERE userID={$_SESSION['userID']}";
+    $result = mysqli_query($conn, $user);
+    $submit = null;
+    $quantity = null;
+    while($data = mysqli_fetch_array($result)) {
+        $submit= $data['submit'];
+        $quantity= $data['quantity'];
+
+    }
+
 ?>
 <html>
 
@@ -32,15 +43,21 @@
         <p class="error"><?php echo $_GET['error']; ?></p>
       <?php } ?>
 
-          <?php if (isset($_GET['success'])) { ?>
+          <?php if (isset($_GET['success']) && $_GET['success'] != null  ) { ?>
                <p class="success"><?php echo $_GET['success']; ?></p>
-          <?php } ?>
-        <form class="card-form" action="exitpass-check.php" method="POST">
-            <div class="action">
-                <input name= "submit" type="submit" class="action-button" value="SUBMIT">
-                
-            </div>
-        </form>
+          <?php }else if ($submit != 0 && $quantity != 0){ ?>
+              <p>Your request has been sent successfully.</p>
+        <?php }
+          if ($quantity == 0){?>
+              <p>Already used allowable exit pass request</p>
+        <?php } ?>
+        <?php  if($submit == 0 && $quantity != 0){ ?>
+            <form class="card-form" action="exitpass-check.php" method="POST">
+                <div class="action">
+                    <input name= "submit" type="submit" class="action-button" value="SUBMIT">
+                </div>
+            </form>
+        <?php } ?>
         <div class="card-info">
             <p>Please note that we are short on staffs so it may take awhile to process your request</p>
         </div>
