@@ -65,7 +65,7 @@
 							<td><?php echo $fetch['date_requested']?></td>
                             <td><?php echo $fetch['quantity']?></td>
                             <?php if($fetch['submit'] == 1 && $fetch['quantity'] !=0) { ?>
-    						<td style="text-align: center;"></a><a onclick = "confirmationDelete(this); return false;" href = "delete-exitpass.php?epassID=<?php echo $fetch['epassID']?>&quantity=<?php echo $fetch['quantity'] ?>"><i></i><button> Approve</button></a></td>
+    						<td style="text-align: center;"></a><a onclick = "confirmationDelete(this); return false;" href = "approve.php?epassID=<?php echo $fetch['epassID']?>&quantity=<?php echo $fetch['quantity'] ?>"><i></i><button> Approve</button></a></td>
                             <?php }else{ ?>
                                 <td>Approved</td>
                             <?php } ?>

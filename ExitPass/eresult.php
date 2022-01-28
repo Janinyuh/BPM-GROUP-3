@@ -66,7 +66,7 @@
                             <td><?php echo $fetch['purok2']?></td>
                             <td><?php echo $fetch['date_requested']?></td>
                             <td><?php echo $fetch['quantity']?></td>
-                            <td><center></a><a onclick = "confirmationDelete(this); return false;" href = "delete-exitpass.php?epassID=<?php echo $fetch['epassID']?>"><i></i><button> Delete</button></a></center></td>
+                            <td><center></a><a onclick = "confirmationDelete(this); return false;" href = "approve.php?epassID=<?php echo $fetch['epassID']?>"><i></i><button> Delete</button></a></center></td>
                         </tr>
                 <?php
                     }
