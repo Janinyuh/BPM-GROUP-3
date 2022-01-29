@@ -10,6 +10,14 @@
 	<title>Ayuda</title>
 	<link rel="stylesheet" type="text/css" href="ayuda.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
 </head>
 <body>
 	<header>
@@ -40,14 +48,19 @@
 		</div>
 		</form>
 		<form action="addayuda-check.php" method="POST">
-		<div class="Add">
-			<label>User ID</label>
+		<div class="Add" style="display: flex">
+			<label style="margin-right: 4px">User ID</label>
 			<input type="text" name="userID" id="userID" placeholder="User ID">
-			<label>Amount</label>
+			<label style="margin-right: 4px">Amount</label>
 			<input type="text" name="amount" id="Amount" placeholder="Amount">
-			<label>Date to Claim</label>
-			<input type="Date" name="date_toclaim" id="date_toclaim">
-			<label>Date Claimed</label>
+			<label style="margin-right: 4px">Date to Claim</label>
+            <div class='input-group date' id='datetimepicker1' style="width: 200px">
+                <input type='text' class="form-control input-group-addon" id="date_toclaim" name="date_toclaim"/>
+                <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+            </div>
+			<label style="margin-right: 4px">Date Claimed</label>
 			<input type="Date" name="date_claimed" id="date_claimed">
 			<button type="submit" name="add-ayuda" class="submit">Add</button>
 		</div>
@@ -91,6 +104,9 @@
 		if(conf){
 			window.location = anchor.attr("href");
 		}
-	} 
+	}
+    $(function() {
+        $('#datetimepicker1').datetimepicker();
+    });
 </script>
 </html> 
